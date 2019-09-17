@@ -9,7 +9,7 @@
 	<title><?php wp_title(""); ?></title>
 
 	<?php if(!is_404()): ?>
-		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato|Lora:400,400i|Open+Sans:400,600&display=swap' ); ?>
+		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Playfair+Display:400,400i|Source+Sans+Pro&display=swap' ); ?>
 	<?php endif; ?>
 	<?php wp_head()?>
 
@@ -21,14 +21,34 @@
 
 <a href="#skiptomaincontent" style="display:none;">Skip to main content</a>
 
-<header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header b-lazy'; ?>" <?php get__header__image(); ?> >
+<header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header'; ?>" <?php get__header__image(); ?> >
 
-	<div class="nav-bar">
+	<section class="masthead">
+		<div class="logo">
+			 <a href="<?php bloginfo('url'); ?>">
+			 	<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="logo"></a>
+			 </a>
+		</div>
+		<div class="nav-bar-locations">
+			<?php if(have_rows('locations', 'option')): ?>
+				<?php while(have_rows('locations', 'option')): the_row(); ?>
+					<div class="the-loc">
+						<a href="<?php the_sub_field('phone_link'); ?>" class="track-outbound head-phone" data-label="Phone - Header"><i class="fas fa-mobile-alt"></i><?php the_sub_field('phone'); ?></a>
+						<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound head-addy" data-label="Address - Header" target="_blank"  rel="noopener">
+							<i class="fas fa-map-marker-alt"></i><span><?php the_sub_field('address', 'option'); ?> | <?php the_sub_field('city', 'option'); ?></span>	
+						</a>
+					</div>
+				<?php endwhile; ?>
+			<?php endif; ?>
+		</div>
 		<div class="menu-trigger">
 			<div class="hamburger"></div>
 			<div class="hamburger"></div>
 			<div class="hamburger"></div>
 		</div>
+	</section>
+
+	<section class="nav-bar">
 		<nav>
 			<?php wp_nav_menu( array(
 				'menu' 		=> 'Main',
@@ -37,29 +57,15 @@
 				'menu_class' => 'main-menu',
 			)); ?>
 		</nav>
-		<div class="nav-bar-locations">
-			<?php inline_svg('icon-phone'); ?>
-			<?php if(have_rows('locations', 'option')): ?>
-				<?php while(have_rows('locations', 'option')): the_row(); ?>
-					<div class="the-loc">
-						<!-- <a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound loc-name" data-label="Address - Header" target="_blank"  rel="noopener">
-							<span><?php the_sub_field('name', 'option'); ?></span>
-						</a> -->
-						<a href="<?php the_sub_field('phone_link'); ?>" class="track-outbound head-phone" data-label="Phone - Header"><?php the_sub_field('phone'); ?></a>
-					</div>
-				<?php endwhile; ?>
-			<?php endif; ?>
-		</div>
-	</div>
+	</section>
 
 	<?php if(!is_front_page()): // Inside Page Logo ?>
 		<section>
 			<div class="inside-logo">
 				 <a href="<?php bloginfo('url'); ?>">
-				 	<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo-header.png" alt=""></a>
+				 	<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="logo"></a>
 				 </a>
 			</div>
-			<div class="inside-tagline">Long Term <span>Weight Loss</span></div>
 		</section>
 	<?php endif; ?>
 

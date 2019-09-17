@@ -17,7 +17,7 @@ $menuHeight : 60px;
 		font-size: 0;
 		text-align: center;
 		display: flex;
-		justify-content: baseline;
+		justify-content: space-between;
 		align-items: center;
 		height: $menuHeight;
 		> li {
@@ -65,7 +65,9 @@ $menuHeight : 60px;
 				color: $lightColor; 
 				height: $menuHeight;
 				text-transform: none;
-				font-weight: 600;
+				// font-weight: 600;
+				text-transform: uppercase;
+				font-family: $highlightFont;
 				&:hover {
 					color: $lightColor;
 					background: darken( $primaryColor, 12%);
@@ -76,7 +78,7 @@ $menuHeight : 60px;
 
 	a {
 		// line-height: 5px;
-		font-size: 14px; 
+		font-size: 16px; 
 	}
 
 	.sub-menu {

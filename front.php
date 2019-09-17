@@ -6,41 +6,18 @@
 
 <div class="welcome-parallax will-parallax parallax-welcome">
 	<section class="welcome" id="skiptomaincontent">
-		<div class="welcome-logo">
-			<h1>
-				<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo-header.png" alt=""></a>
-			</h1> 
-		</div>
 		<div class="welcome-cta">
 			<h2><?php the_field('welcome_headline'); ?></h2>
 			<?php the_field('welcome_content'); ?>
 			<a href="<?php the_field('learn_more_button'); ?>" class="button" rel="nofollow">Learn More</a>
-			<a href="<?php the_field('schedule_a_consultation_button'); ?>" class="button" rel="nofollow">Schedule a Consultation</a>
-			<div class="overlay"></div>
+				
+			</a>
 		</div>
 	</section>
 </div> 
 
 
 
-<section class="welcome-bottom">
-	<div class="top-recognition">
-		<span>Top National Recognition</span>
-		<div class="reco">
-			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/icon-asmbs.png" alt="Recognition icon">
-			Bariatric Surgery Center of Excellence (American Society for Metabolic & Bariatric Surgery)
-		</div>
-		<div class="reco">
-			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/icon-bluecross.png" alt="Recognition icon">
-			Designated Center for Bariatric Surgery (Blue Cross Blue Shield of Illinois)
-		</div>
-	</div>
-	<div class="icon-video">
-		<a href="<?php bloginfo('url'); ?>/bariatric-surgery/videos/">
-			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/icon-video.png" alt="video icon">
-		</a>
-	</div>
-</section>
 
 
 

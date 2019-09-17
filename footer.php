@@ -24,10 +24,10 @@
 
 <footer>
 
-	<section class="upper-footer footer-parallax will-parallax parallax-welcome b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-footer.jpg">
+	<section class="upper-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-footer.jpg">
 		<span class="the-headline">Contact Us</span>
 		<div class="footer-form">
-			<?php echo do_shortcode('[seaforms name="footer-contact-form"]'); ?>
+			<?php echo do_shortcode('[seaforms name="footer-contact"]'); ?>
 		</div>
 		<div class="footer-locations">
 			 <div class="footer-address">
@@ -35,19 +35,19 @@
 					<?php while(have_rows('locations', 'option')): the_row(); ?>
 						<div class="the-loc">
 							<i class="fas fa-map-marker-alt"></i>
-							<span><?php the_sub_field('name', 'option'); ?></span><br>
+							<!-- <span><?php the_sub_field('name', 'option'); ?></span><br> -->
+							<div class="loc-addy">
+								
 							<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound loc-name" data-label="Address - Footer" target="_blank"  rel="noopener">
 								<?php the_sub_field('address', 'option'); ?><br /> <?php the_sub_field('city', 'option'); ?>
 							</a>
+							</div>
 							<div class="loc-phone">
 								<a href="<?php the_sub_field('phone_link', 'option'); ?>" class="track-outbound" data-label="Phone - Footer">
 									Phone: <?php the_sub_field('phone', 'option'); ?></a>
 									<br>
 									Fax: <?php the_sub_field('fax', 'option'); ?>
 							</div>
-							<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound loc-map-directions" data-label="Address - Footer" target="_blank" rel="noopener">
-								Map & Directions
-							</a>
 						</div>
 					<?php endwhile; ?>
 				<?php endif; ?>
@@ -55,37 +55,29 @@
 		</div>
 	</section>
 
-<!-- 
-	<div class="footer-logo">
-		<a href="<?php bloginfo('url'); ?>">
-			<img data-src="<?php bloginfo('template_directory'); ?>/images/logo-footer.png" alt="logo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy">
-		</a>
-	</div> -->
-
-
-	<div class="middle-footer">
-		<div class="footer-social">
-			<div class="footer-headling">Stay Connected</div>
-			<a href="<?php the_field('facebook','options'); ?>" target="_blank" rel="noopener" title="facebook" aria-label="facebook"><i class="fab fa-facebook"></i></a>
-			<a href="<?php the_field('youtube','options'); ?>" target="_blank" rel="noopener" title="youtube" aria-label="youtube"><i class="fab fa-youtube"></i></a>
-		</div>
-		<!-- <div class="online-bill-pay">
-			<div class="footer-headling">Online Bill Pay</div>
-	
-			<a href="https://mypay.poscorp.com/suburbansurgicalcare#/account/login" target="_blank" rel="nofollow noopener" target="_blank">
-				<img data-src="<?php bloginfo('template_directory'); ?>/images/icon-billpay.png" alt="pay icon" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy">
-			</a>
-		</div> -->
-		<!-- <div class="shop-button">
-			<img data-src="<?php bloginfo('template_directory'); ?>/images/icon-shop-logo.png" alt="pay icon" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy">
-			<a href="https://suburbansurgicalcarespecialists.bariatricadvantage.com/" class="button" rel="noopener nofollow" target="_blank">Bariatric Advantage eShop <?php inline_svg('icon-shop'); ?></a>
-		</div> -->
-	</div>
 
 	<section class="lower-footer">
+		<div class="trainded-wrapper">
+			<div class="foot-headline">Fellowship Trained Facial Plastic Surgeon</div>
+			<div class="footer-logos">
+				<?php if(have_rows('footer_logos', 'option')): ?>
+					<ul>
+						<?php while(have_rows('footer_logos', 'option')): the_row(); ?>
+							<li>
+								<img data-src="<?php the_sub_field('logo'); ?>" class="b-lazy" alt="logo">
+							</li>
+						<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
+			</div>
+			<div class="footer-social">
+				<div class="footer-social-headline">Stay Connected</div>
+				<a href="<?php the_field('facebook','options'); ?>" target="_blank" rel="noopener" title="facebook" aria-label="facebook"><i class="fab fa-facebook"></i></a>
+			</div>
+		</div>
 		<div class="reviews_markup"><?php do_action('reviews_markup'); ?></div>
 		<div class="disclaimer">* Stock model images are used throughout this website and are for illustrative purposes only. All before-and-after photos and patient testimonials on our site are from actual patients, and have been published with permission. Individual results may vary.</div>
-		<div class="copyright">Copyright &copy; <?=date("Y")?> <?php bloginfo('title');?>. All rights reserved | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php bloginfo('url'); ?>/privacy-notice">Privacy Notice</a> | <a href="<?php bloginfo('url'); ?>/illinois/" title="Weight Loss Surgery in Nearby Cities">Weight Loss Surgery in Nearby Cities</a> | <a href="<?php bloginfo('url'); ?>/sitemap/" title="Sitemap">Sitemap</a> </div>
+		<div class="copyright">Copyright &copy; <?=date("Y")?> <?php bloginfo('title');?>. All rights reserved | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php bloginfo('url'); ?>/sitemap/" title="Sitemap">Sitemap</a> </div>
 		<div class="rm-sig"><a href="<?php the_field('rm_footer_link', 'options'); ?>" target="_blank" rel="noopener" title="<?php the_field('rm_footer_text', 'options'); ?>"><?php the_field('rm_footer_text', 'options'); ?></a> by <a href="https://www.rosemontmedia.com/" title="Rosemont Media" target="_blank" rel="noopener">Rosemont Media</a></div>
 
 		<div class="rm-logo"><a href="https://www.rosemontmedia.com/" title="Rosemont Media" target="_blank" rel="noopener">
@@ -104,8 +96,6 @@
 <script id="__bs_script__">//<![CDATA[
     document.write("<script async src='http://HOST:35730/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
 //]]></script>
-
-
 
 
 

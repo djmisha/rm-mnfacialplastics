@@ -1,20 +1,20 @@
-header,
-.welcome-parallax,
+// header,
+// .welcome-parallax,
 .welcome-bottom,
 .home-aboutus,
-// .home-doctors,
+.home-doctors,
 .home-weight,
 .home-featured,
 .home-orbera,
 .home-news,
-.upper-footer,
-.middle-footer,
-.lower-footer,
-.footer-logo,
-.footer-map
-footer 
+// .upper-footer,
+// .middle-footer,
+// .lower-footer,
+// .footer-logo,
+// .footer-map
+// footer 
 {
-	// display: none !important;
+	display: none !important;
 }
 
 .home h2 {
@@ -42,7 +42,6 @@ footer
 .welcome-parallax {
 	@include media($desktop) {
 		background: #fff url("images/bg-welcome.jpg") center center no-repeat;
-
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
@@ -62,215 +61,25 @@ footer
 		// background-position-x: right 0px; 
 	}
 	@include media($tablet) {
-		background: #fff url("images/bg-welcome.jpg") top right no-repeat;
-		background-position-x: -500px; 
+		background: #fff url("images/bg-welcome.jpg") center center no-repeat;
+		// background-position-x: -500px; 
 		background-size: cover;
-		height: 720px;
-	}
-	@include media(860px) {
-		background: #fff url("images/bg-welcome.jpg") top right no-repeat;
-		background-position-x: -400px; 
-		background-size: cover;
-		height: 720px;
+		height: 475px;
 	}
 	@include media($desktop) {
 		background: none;
-		height: 930px;
-		min-height: 930px;
 	}
-
-
 	.is--pad & {
 		// display: block;
 		// background: #fff url("images/bg-welcome.jpg") top center no-repeat;
 		// background-position-x: right -250px; 
 		// background-size: cover;
-
-	}
-	
-
-	.welcome-logo {
-		padding-top: 70px;
-		width: 100%;
-		max-width: 387px;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-		@include media($tablet) {
-			margin: 0;
-			max-width: none;
-			padding-top: 115px;
-			width: 387px;
-			height: auto;
-			left: 40px;
-			right: auto;
-		}
-		@include media($desktop) {
-			width: 549px;
-			height: 75px;
-			right: calc(50%);
-			left: auto;
-			padding-top: 115px;
-		}
-		h1 {
-			margin: 0;
-		}
-		img {
-			width: 100%;
-			max-width: 300px;
-			@include media($tablet) {
-			max-width: 400px;
-			}
-			@include media($desktop) {
-				width: auto;
-				max-width: none;
-			}
-		}
 	}
 	.welcome-cta {
-		text-align: left;
-		padding-top: 340px;
-		max-width: 300px;
-		@include media($tablet) {
-			max-width: 400px;
-			right: 40px;
-			padding-top: 100px;
-		}
-		@include media($desktop) {
-			max-width: 600px;
-			padding-top: 200px;
-		}
-		h2 {
-			margin-top: 0;
-			color: $secondaryColor;
-			font-family: $secondaryFont;
-			font-size: 50px;
-			line-height: 40px;
-			@include media($tablet) {
-				font-size: 70px;
-				line-height: 70px;
-			}
-			@include media($desktop) {
-				font-size: 102px;
-				line-height: 95px;
-			}
-			span {
-				font-weight: 400;
-				letter-spacing: -1px;
-				font-size: 36px;
-				@include media($tablet) {
-					font-size: 30px;
-					line-height: 30px;
-				}
-				@include media($desktop) {
-					font-size: 50px;
-					line-height: 46px;
-				}
-				display: block;
-				font-family: $primaryFont;
-				color: $primaryColor;
-			}
-		}
-		p {
-			padding-top: 30px;
-			@include media($tablet) {
-				max-width: 370px;
-				
-			}
-			@include media($desktop) {
-				max-width: 510px;
-				font-size: 15px;
-			}
-		}
-		h2, p, a {
-			position: relative;
-			z-index: 999;
-		}
-		.overlay {
-			z-index: 100;
-			opacity: .8;
-			width: 150px;
-			height: 150px;
-			position: absolute;
-			bottom: 60px;
-			left: 80px;
-			border-radius: 50%;
-		    background-color: #fff;
-		    box-shadow:
-		        0 0 60px 30px #fff, 
-		        0 0 100px 60px #fff,
-		        0 0 140px 90px #fff;
-	        @include media($tablet) {
-	        	display: none;
-	        }
-		}
+		
 	}
 }
 
-.welcome-bottom {
-		text-align: left;
-		padding-top: 25px;
-		@include media($tablet) {
-			display: flex;
-		}
-		@include media($desktop) {
-			padding-top: 0px;
-			justify-content: space-between;
-			align-items: center;
-			margin-top: -160px;
-			height: 164px;
-		}
-	span {
-		font-family: $secondaryFont;
-		font-style: italic;
-		color: $primaryColor;
-		display: block;
-		font-size: 15px;
-		width: 100%;
-		margin-bottom: 10px;
-	}
-	.top-recognition {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		@include media($tablet) {
-			justify-content: space-between;
-		}
-		@include media($desktop) {
-			justify-content: flex-start;
-		}
-
-	}
-	.reco {
-		max-width: 270px;
-		font-size: 12px;
-		line-height: 12px;
-		img {
-			float: left;
-			margin-right: 10px;
-		}
-		&:first-of-type {
-			margin-right: 30px;
-			margin-bottom: 20px;
-			@include media($tablet) {
-				margin-bottom: 0;
-			}
-		}
-	}
-	.icon-video {
-		@include media($tablet) {
-			position: absolute;
-			right: 20px;
-			top: 580px;
-
-		}
-		@include media($desktop) {
-			position: relative;
-			right: -40px;
-			top: auto;
-		}
-	}
-}
 
 /*====================================
 =            home-aboutus            =
