@@ -38,7 +38,6 @@
 							<!-- <span><?php the_sub_field('name', 'option'); ?></span><br> -->
 							<div class="loc-addy">
 								
-							<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound loc-name" data-label="Address - Footer" target="_blank"  rel="noopener">
 								<?php the_sub_field('address', 'option'); ?><br /> <?php the_sub_field('city', 'option'); ?>
 							</a>
 							</div>

@@ -5931,9 +5931,17 @@ aside li {
 @media only screen and (min-width: 1080px) {
   .upper-footer {
     background-position: center right;
-    background-position-x: right -400px;
+    background-position-x: right -350px;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .upper-footer {
+    background-position-x: right -400px;
     padding-top: 100px;
     padding-bottom: 100px;
   }

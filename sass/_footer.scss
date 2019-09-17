@@ -116,11 +116,17 @@
 	}
 	@include media($desktop) {
 		background-position: center right;
-		background-position-x: right -400px; 
+		background-position-x: right -350px; 
 		background-repeat: no-repeat; 
 		background-size: cover;
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+	@include media(1200px) {
+		background-position-x: right -400px; 
 		padding-top: 100px;
 		padding-bottom: 100px;
+		
 	}
 	.the-headline {
 		text-align: left;

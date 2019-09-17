@@ -12,17 +12,19 @@ if( !defined('TMPL_DIR_URI')):
 	define('TMPL_DIR_URI' , get_template_directory_uri() );
 endif;
 
-
 /*===================================
 =            THEME SETUP            =
 ===================================*/
 
-include TMPL_DIR . '/inc/functions.php';  //Inclide RM Functions in inc/functions.php (must be included before anything else)
+//Inclide RM Functions in inc/functions.php (must be included before anything else)
+include TMPL_DIR . '/inc/functions.php';  
 
+
+// Misha Commneted out Nav Walder, not used anymore 
 // Nav Walker 
-if(file_exists(TMPL_DIR . '/inc/walkers/walkerpagecustom.php')):
-	include TMPL_DIR . '/inc/walkers/walkerpagecustom.php';
-endif;
+// if(file_exists(TMPL_DIR . '/inc/walkers/walkerpagecustom.php')):
+// 	include TMPL_DIR . '/inc/walkers/walkerpagecustom.php';
+// endif;
 
 
 function __themesetup(){
@@ -62,7 +64,7 @@ function __themejs(){
 	wp_deregister_script( 'wp-embed' ); // Disable wp-embed.js   
 
 	// Required
-	wp_register_script('jquery', "https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js", false, "3.3.1", true);
+	wp_register_script('jquery', TMPL_DIR_URI . '/js/libs/jquery.min.js', false, "3.3.1", true);
 	wp_register_script( 'modernizr', TMPL_DIR_URI . '/js/libs/modernizr.min.js', false, '2.8.3', false );
 	// Optional
 	// wp_register_script('rm-cookie', TMPL_DIR_URI . '/js/libs/jquery.cookie.min.js', array('jquery','modernizr'), '1.0', true );
@@ -382,35 +384,35 @@ if ( ! function_exists( 'mishas_happenstance_content_nav' ) ) {
 
 
 
-function custom_start_el( $item_output, $item, $depth, $args ) {
+// function custom_start_el( $item_output, $item, $depth, $args ) {
 
-	if ( $args->menu_id == 'menu-main' && in_array( 'menu-item-has-children', $item->classes ) ) {
-		$item_output = $item_output .'<div class="nav-dropdown-button"><div class="nav-expander"><span></span><span></span></div></div>';
-	}
+// 	if ( $args->menu_id == 'menu-main' && in_array( 'menu-item-has-children', $item->classes ) ) {
+// 		$item_output = $item_output .'<div class="nav-dropdown-button"><div class="nav-expander"><span></span><span></span></div></div>';
+// 	}
 
-	return $item_output;
+// 	return $item_output;
 
-}
-add_filter( 'walker_nav_menu_start_el', 'custom_start_el', 10, 4 );
+// }
+// add_filter( 'walker_nav_menu_start_el', 'custom_start_el', 10, 4 );
 
-add_filter( 'wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2 );
+// add_filter( 'wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2 );
 
-function my_wp_nav_menu_objects( $items, $args ) {
+// function my_wp_nav_menu_objects( $items, $args ) {
 
-// loop
-	foreach( $items as &$item ) {
+// // loop
+// 	foreach( $items as &$item ) {
 
-	// vars
-		$duplicate = get_field('duplicate', $item);
+// 	// vars
+// 		$duplicate = get_field('duplicate', $item);
 
-	// append duplicate
-		if ( !empty( $duplicate ) ) {
-			$item->classes[]	= 'duplicate-item';
-		}
-	}
-// return
-	return $items;
-}
+// 	// append duplicate
+// 		if ( !empty( $duplicate ) ) {
+// 			$item->classes[]	= 'duplicate-item';
+// 		}
+// 	}
+// // return
+// 	return $items;
+// }
 
 
 
