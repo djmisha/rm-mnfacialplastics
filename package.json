@@ -1,0 +1,26 @@
+{
+	"name": "RM-Theme",
+	"version": "1.0.0",
+	"main": "gulpfile.js",
+	"devDependencies": {
+		"autoprefixer": "^6.7.7",
+		"browser-sync": "^2.18.8",
+		"gulp": "3.9.1",
+		"gulp-imagemin": "^6.1.0",
+		"gulp-jshint": "^2.1.0",
+		"gulp-newer": "^1.3.0",
+		"gulp-postcss": "^6.4.0",
+		"gulp-sass": "^3.1.0",
+		"gulp-util": "^3.0.8",
+		"jshint": "^2.10.2",
+		"yargs": "^14.0.0"
+	},
+	"dependencies": {
+		"time-require": "^0.1.2"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Rubot",
+	"license": "ISC"
+}

@@ -1,0 +1,79 @@
+/* ------------------------
+   Variables
+------------------------ */
+
+
+// gallery
+
+$Blue: #085287;
+$lightBlue: #1dbefa;
+$Orange: #e27500;
+$contentGrey: #282828;
+
+
+$Darker: #1a1a1a;
+$DarkGrey :#4b4b4b;
+$yellow: #ffcd4e;
+$white: #fff;
+
+
+
+$primaryColor: $Blue; // link color, buttons, nav, footer, etc
+$primaryAlt: $lightBlue; //link hover
+
+$primaryHighlight: $Darker;
+
+$secondaryColor: $Orange;
+$secondaryAlt: $yellow;
+
+$tertiaryColor: $contentGrey;
+$tertiaryAlt: #000000;
+
+$lightColor: #ffffff;
+$darkColor: #000000;
+
+// Font Family
+
+$primaryFont: 'Open Sans', sans-serif;
+$secondaryFont: 'Lora', serif;
+$highlightFont:  'Lato', sans-serif;
+
+
+
+$sidebar: 350px;
+
+// Font Weight
+
+$thin: 100;
+$light: 300;
+$normal: 400;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$heavy: 900;
+
+// Media Query break points
+
+$tablet: 768px;
+$desktop: 1080px;
+$full: 1480px;
+
+$ipad-min: 768px;
+$ipad-max: 1024px;
+
+$ipadpro-min: 1024px;
+$ipadpro-max: 1366px;
+
+$ipad: ipads;
+$ipads: ipads;
+
+// Increasing color
+
+$step: 1;
+
+// Defaults
+
+$defaultfont: $primaryFont;
+$defaultcolor: $darkColor;

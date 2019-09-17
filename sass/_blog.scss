@@ -1,0 +1,134 @@
+.blog,
+.tmpl_type_category,
+.tmpl_type_archive,
+.from-blog {
+
+	.content {
+		.wp-caption {
+			padding-top:0px;
+			border-radius: 0px;
+
+			.wp-caption-text {
+				padding:10px;
+				font-size: 13px;
+			}
+		}
+	}
+	h2 {
+		margin-top: 0;
+		margin-bottom: 0;
+		@include media($desktop) {
+			@include font(40px, 120%);
+		}
+		a {
+			text-decoration: none;
+			color: $darkColor;
+		}
+	}
+	.post-snippet {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 40px;
+		border-bottom: 1px solid rgba($darkColor, .2);
+
+		@include media($tablet) {
+			margin-bottom: 50px;
+			flex-direction: row;
+		}
+		
+		.thumb {
+			// display: none;
+			float: right;
+			margin-left: 20px;
+			width: 152px;
+			border: 1px solid $lightColor;
+			@include media($tablet) {
+				margin-left: 0;
+				display: block;
+				float: left;
+				margin-right: 30px;
+			}
+		}
+		.excerpt {
+			margin-bottom: 50px;
+
+			h2.blog-title a  {
+				color: $primaryColor;
+				font-family: $secondaryFont;
+			}
+
+			h2.blog-title   {
+				margin-bottom: 10px;
+
+				@include media($desktop) {
+					font-size: 33px;
+					line-height: 33px;
+				}	
+			}
+			
+			.para a {
+				text-decoration: none !important;
+				color: $darkColor;
+				span {
+					text-decoration: underline;
+					color: $primaryColor;
+				}
+			}
+			p {
+				margin-top: 0;
+
+			}
+		}
+	}
+	.date {
+		@include font(21px);
+		text-transform: uppercase;
+		color: $primaryColor;
+		text-align: right;
+	}
+	.meta-data {
+		margin-bottom: 30px;
+		color: #96a1a6;
+		font-style: italic;
+		line-height: 16px;
+		font-size: 12px;
+		a {
+			color: #96a1a6;
+		}
+	}
+	.button {
+		text-decoration: none;
+		clear: both;
+	}
+
+	.next-prev {
+		margin-top: 50px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+
+		a {
+			text-decoration: none;
+			// margin-right: 20px;
+			margin-bottom: 15px;
+			width: 100%;
+			@include media($tablet) {
+				width: auto;
+			}
+
+		}
+		i {
+			color: $primaryColor;
+		}
+	}
+}
+
+.tmpl_type_single {
+	.meta-data {
+		margin-bottom: 0px;
+	}
+	.button {
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,195 @@
+/* Naviagation bar */
+
+.nav-bar {
+	z-index: 9998;
+	background: rgba($primaryColor, 1);
+	position: relative;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 60px;
+	transition: all .2s ease-out;
+	
+	@include media($tablet) {
+		// flex-direction: row-reverse;
+	}
+	@include media($desktop) {
+
+		background: transparent; 
+		left: 0px;
+		right: 0px;
+		display: block;
+		top: 0px;
+		background: rgba($primaryColor, 1);
+		border-top: 2px solid $secondaryColor;
+		box-shadow: 0px 10px 20px rgba($darkColor, .3);
+		position: fixed;
+		height: 62px;
+	}
+	.is--ipad & {
+		height: 60px;
+	}
+	nav {
+		max-width: 1252px;
+		margin: 0 auto;
+	}
+}
+
+.menu-trigger {
+	.is--ipad & {
+		position: absolute;
+		left: 0px;
+		display: block;
+		width: 65px;
+		@include media(1330px) {
+			right: auto;
+			left: 0px;
+		}
+	}
+	padding: 15px 20px 15px 20px;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	width: 65px;
+	@include media($desktop) {
+		display: none;
+	}
+	.hamburger {
+		border-radius: 4px;
+		margin-top: 5px;
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 2px;
+		background: $lightColor;
+		&:first-of-type {
+			margin-top: 6px;
+		}
+		&:last-of-type {
+			margin-bottom: 0px;
+			width: 70%;
+		}
+	}
+}
+
+.nav-bar-locations {
+	position: absolute;
+	width: 250;
+	background: transparent;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	top: 15px;
+	right: 20px;
+	height: auto;
+	@include media($desktop) {
+		width: 300px;
+		position: absolute;
+		right: calc(50% - 600px);
+		left: auto;
+	}
+	> div {
+		font-weight: 600;
+		margin-left: 5px;
+		&:first-of-type {
+			padding-top: 5px;
+				padding-right: 10px;
+				padding-left: 5px;
+				border-right: 1px solid $primaryAlt;
+		}
+		&:last-of-type {
+			padding-top: 5px;
+				padding-left: 7px;
+			@include media($tablet) {
+			}
+		}
+	}
+	a {
+		text-decoration: none;;
+		span {
+			font-size: 12px;
+			color: $lightColor;
+			@include media($tablet) {
+				display: none;
+			}
+		}
+	}
+	.head-phone {
+		color: $lightColor;
+	}
+	svg {
+		width: 17px;
+		height: 28px;
+		path {
+			fill: $secondaryColor;
+		}
+	}
+}
+
+
+/* Inside Page Headers */
+
+.int-header {
+	// background: #e7ecef url('images/bg-header.jpg') center center no-repeat;
+	background-color: #e7ecef;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: right -240px;
+	height: 180px;
+	margin-top: 60px;
+	text-align: left;
+	@include media(500px) {
+		background-position: center center;
+
+	}
+	@include media($tablet) {
+		background-position: center center;
+		margin-top: 0px;
+		padding-top: 0;
+		background-size: cover;
+		height: 400px;
+	}
+	@include media($desktop) {
+	}
+}
+
+.inside-logo {
+	position: absolute;
+	top: 0;
+	left: 20px;
+	padding-top: 80px;
+	@include media($tablet) {
+		padding-top: 100px;
+		position: relative;
+		left: 0;
+	}
+	img {
+		width: 200px;
+		@include media($tablet) {
+			width: auto;
+		}
+	}
+}
+
+.inside-tagline {
+	padding-top: 80px;
+	color: $primaryColor;
+	font-size: 14px;
+	@include media($tablet) {
+		font-size: 22px;
+	}
+	span {
+		display: block;
+		font-family: $secondaryFont;
+		color: $secondaryColor;
+		font-size: 20px;
+		line-height: 20px;
+		@include media($tablet) {
+			font-size: 40px;
+			line-height: 40px;
+		}
+	}
+}
