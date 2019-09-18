@@ -1,11 +1,9 @@
 // header,
 .welcome-parallax,
-.home-aboutus,
-.home-doctors,
-.home-weight,
-.home-featured,
-.home-orbera,
+.home-testis,
 .home-news,
+.sticky-footer-bar,
+.home-team,
 // .upper-footer,
 // .middle-footer,
 // .lower-footer,
@@ -16,23 +14,17 @@ footer
 	display: none !important;
 }
 
-// .home h2 {
-// 	font-family: $secondaryFont;
-// 	color: $primaryColor;
-// 	margin-bottom: 0;
-// 	margin-top: 0;
-// 	span {
-// 		color: $secondaryColor;
-// 	}
-// 	font-size: 40px;
-// 	@include media($tablet) {
+.home-team h2 {
+	font-family: $secondaryFont;
+	font-size: 40px;
+	@include media($tablet) {
 		
-// 	}
-// 	@include media($desktop) {
-// 		font-size: 48px;
-// 		line-height: 54px;
-// 	}
-// }
+	}
+	@include media($desktop) {
+		font-size: 50px;
+		line-height: 54px;
+	}
+}
 
 /*===============================================
 =            Welcome to my Website!             =
@@ -187,9 +179,82 @@ footer
 
 
 .home-team {
+	h2 {
+		color: $lightColor;
+		margin-top:0;
+	}
+	background-color: #302f2f;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: 800px auto;
+	padding-top: 40px;
+	height: 600px;
+	border-top: 10px solid #282828;
+	@include media($tablet) {
+		background-color: #302f2f;
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		background-size: 1400px auto;
+		padding-top: 60px;
+		height: 600px;
+	}
 	@include media($desktop) {
+		background-color: #302f2f;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-top: 80px;
 		height: 780px;
-		background: #302f2f;
+	}
+	position: relative;
+	ul {
+		max-width: 1200px;
+		margin: 0 auto;
+		list-style: none;
+		@include media($tablet) {
+			display: flex;
+			justify-content: space-around;
+			position: absolute;
+			bottom: 50px;
+			left: 0;
+			right: 0;
+		}
+		li a {
+			border-radius: 5px;
+			padding: 0px 20px;
+			padding-bottom: 5px;
+			display: inline-block;
+			color: $lightColor;
+			text-decoration: none;
+			border: 2px solid transparent;
+			transition: border .15s ease-in;
+			font-size: 16px;
+			@include media($tablet) {
+				padding: 10px 10px;
+				font-size: 18px;
+			}
+			@include media($desktop) {
+				padding-bottom: 10px;
+				font-size: 20px;
+				padding: 10px 20px;
+				// padding-bottom: 30px;
+			}
+			&:hover {
+				border: 2px solid $primaryColor;
+			}
+
+		}
+		li span {
+			font-size: 10px;
+			display: block;
+			@include media($tablet) {
+				padding-top: 10px;
+				font-size: 14px;
+			}
+			@include media($desktop) {
+				font-size: 16px;
+			}
+		}
 	}
 }
 

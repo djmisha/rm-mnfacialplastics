@@ -15,7 +15,6 @@
 </div> 
 
 
-
 <section class="home-testis">
 	<div class="box-with-border">
 		<div class="inside-box ib-one">
@@ -33,25 +32,21 @@
 </section>
 
 
-
 <div class="home-team b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-team.jpg">
-		<h3>Meet The Team</h3>
-		<?php if(have_rows('team_members')): ?>
-			<ul>
-				<?php while(have_rows('team_members')): the_row(); ?>
-					<li>
-						<a href="<?php the_sub_field('link'); ?>" rel="nofollow">
-							<?php the_sub_field('name'); ?>
-							<?php the_sub_field('title'); ?>
-						</a>
-					</li>
-				<?php endwhile; ?>
-			</ul>
-		<?php endif; ?>
-	</div>
+	<h2>Meet The Team</h2>
+	<?php if(have_rows('team_members')): ?>
+		<ul>
+			<?php while(have_rows('team_members')): the_row(); ?>
+				<li>
+					<a href="<?php the_sub_field('link'); ?>" rel="nofollow">
+						<?php the_sub_field('name'); ?>
+						<span><?php the_sub_field('title'); ?></span>
+					</a>
+				</li>
+			<?php endwhile; ?>
+		</ul>
+	<?php endif; ?>
 </div>
-
-
 
 
 
