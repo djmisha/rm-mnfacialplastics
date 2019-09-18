@@ -3803,7 +3803,7 @@ a.page-numbers.current,
   line-height: 25px;
   text-transform: none;
   font-family: "Open Sans", sans-serif;
-  padding: 7px 20px;
+  padding: 7px 30px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   background: #4ea9b7;
@@ -4396,7 +4396,7 @@ main,
 /* Naviagation bar */
 .masthead {
   min-height: 124px;
-  border-top: 35px solid #d5d4c7;
+  border-top: 5px solid #d5d4c7;
   border-bottom: 10px solid #e8e8e7;
   background: #fff;
   position: relative;
@@ -4437,7 +4437,7 @@ main,
   z-index: 9998;
   background: #464646;
   position: relative;
-  display: block;
+  display: none;
   top: 0px;
   left: 0px;
   right: 0px;
@@ -5030,7 +5030,7 @@ main,
   .content {
     margin-bottom: 0;
     padding-bottom: 100px;
-    width: calc(100% - 350px);
+    width: calc(100%);
   }
 }
 
@@ -5780,8 +5780,8 @@ aside li {
 ------------------------ */
 .sticky-footer-bar {
   z-index: 9999;
-  background: #464646;
-  height: 60px;
+  background: #50b1c0;
+  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5792,17 +5792,26 @@ aside li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   display: none;
+  border-top: 5px solid #5eb5c2;
+  border-bottom: 5px solid #77c7d3;
 }
 
 @media only screen and (min-width: 1080px) {
   .sticky-footer-bar {
+    color: #ffffff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: fixed;
     right: 0;
     left: 0;
-    bottom: -60px;
+    bottom: -70px;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
   }
@@ -5812,85 +5821,33 @@ aside li {
   bottom: 0;
 }
 
-.sticky-footer-bar .bar-phones {
-  font-weight: 600;
-  color: #ffffff;
-  margin-right: 40px;
-  position: relative;
+.sticky-footer-bar .bar-hdng {
+  font-size: 30px;
+  font-family: "Playfair Display", serif;
 }
 
-.sticky-footer-bar .bar-phones a {
+.sticky-footer-bar i {
+  font-size: 36px;
+  margin-right: 20px;
+  position: absolute;
+  left: -40px;
+  top: -7px;
+}
+
+.sticky-footer-bar a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.sticky-footer-bar .bar-phones a:first-of-type {
-  margin-right: 20px;
-}
-
-.sticky-footer-bar .bar-phones svg {
-  top: -5px;
-  left: -25px;
-  position: absolute;
-  width: 17px;
-  height: 28px;
-}
-
-.sticky-footer-bar .bar-contact {
-  font-family: "Playfair Display", serif;
-  color: #ffffff;
+.sticky-footer-bar .bar-phones {
+  margin: 0 80px 0 100px;
   font-size: 22px;
-  width: 300px;
-  text-align: left;
-}
-
-.sticky-footer-bar .bar-or {
-  width: 30px;
-  height: 30px;
-  background: #b46e26;
-  border-radius: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #ffffff;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-}
-
-.sticky-footer-bar .button {
-  background: #fff;
-  color: #4ea9b7;
-  font-weight: 600;
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
-
-.sticky-footer-bar .button-email, .sticky-footer-bar .button-patient {
   position: relative;
 }
 
-.sticky-footer-bar .button-email svg {
-  position: absolute;
-  left: -35px;
-  width: 27px;
-  height: 27px;
-}
-
-.sticky-footer-bar .button-patient svg {
-  width: 13px;
-  height: 28px;
-  position: absolute;
-  left: -20px;
-}
-
-.sticky-footer-bar svg path, .sticky-footer-bar svg polygon {
-  fill: #ffffff;
+.sticky-footer-bar .button-email a {
+  color: #4ea9b7;
+  background: #ffffff;
 }
 
 /*====================================
@@ -6465,33 +6422,16 @@ aside li {
 /* ------------------------
 	Home Page
 ------------------------ */
+.welcome-parallax,
 .welcome-bottom,
 .home-aboutus,
 .home-doctors,
 .home-weight,
 .home-featured,
 .home-orbera,
-.home-news {
+.home-news,
+footer {
   display: none !important;
-}
-
-.home h2 {
-  font-family: "Playfair Display", serif;
-  color: #4ea9b7;
-  margin-bottom: 0;
-  margin-top: 0;
-  font-size: 40px;
-}
-
-.home h2 span {
-  color: #464646;
-}
-
-@media only screen and (min-width: 1080px) {
-  .home h2 {
-    font-size: 48px;
-    line-height: 54px;
-  }
 }
 
 /*===============================================
@@ -6499,25 +6439,25 @@ aside li {
 ===============================================*/
 @media only screen and (min-width: 1080px) {
   .welcome-parallax {
-    background: #fff url("images/bg-welcome.jpg") center center no-repeat;
+    background: #282828 url("images/bg-welcome.jpg") center center no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
   }
 }
 
 .welcome {
-  background: #fff url("images/bg-welcome.jpg") top center no-repeat;
-  background-position-x: -1250px;
-  background-position-y: 120px;
-  height: 787px;
+  background: #282828 url("images/bg-welcome.jpg") top center no-repeat;
+  height: 520px;
   position: relative;
   overflow: hidden;
+  background-size: 800px auto;
+  background-position-y: -50px;
 }
 
 @media only screen and (min-width: 768px) {
   .welcome {
-    background: #fff url("images/bg-welcome.jpg") center center no-repeat;
-    background-size: cover;
+    background: #282828 url("images/bg-welcome.jpg") center center no-repeat;
+    background-size: 1900px auto;
     height: 475px;
   }
 }
@@ -6528,57 +6468,159 @@ aside li {
   }
 }
 
-/*====================================
-=            home-aboutus            =
-====================================*/
-.home-aboutus {
-  text-align: left;
-  padding-top: 40px;
-  padding-bottom: 40px;
+.welcome .welcome-cta {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 290px;
 }
 
 @media only screen and (min-width: 768px) {
-  .home-aboutus {
-    padding-top: 80px;
-    padding-bottom: 100px;
+  .welcome .welcome-cta {
+    text-align: left;
+    max-width: 550px;
+    margin-top: 120px;
+  }
+}
+
+.welcome .welcome-cta h2 {
+  margin-top: 0;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome .welcome-cta h2 {
+    font-size: 39px;
+    line-height: 52px;
   }
 }
 
 @media only screen and (min-width: 1080px) {
-  .home-aboutus {
+  .welcome .welcome-cta h2 {
+    font-size: 46px;
+    line-height: 52px;
+  }
+}
+
+.welcome .welcome-cta h2 span {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome .welcome-cta h2 span {
+    margin-top: 20px;
+    font-size: 26px;
+  }
+}
+
+/*===================================
+=            home-testis            =
+===================================*/
+.box-with-border {
+  background: #fdfdfd;
+  padding: 10px;
+  -webkit-box-shadow: 0px 5px 7px rgba(70, 70, 70, 0.1);
+          box-shadow: 0px 5px 7px rgba(70, 70, 70, 0.1);
+}
+
+.box-with-border .inside-box {
+  background: #fdfdfd;
+  padding: 20px;
+  border: 1px solid #d8d7cd;
+}
+
+.home-testis {
+  background: #e8e8e7;
+  min-height: 228px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-testis {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-}
-
-.home-aboutus > div:first-of-type {
-  margin-bottom: 60px;
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-aboutus > div {
-    margin-bottom: 0px;
+  .home-testis > div {
     width: 48%;
   }
 }
 
-.home-aboutus .about-sub-head {
-  font-size: 18px;
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 20px;
+.home-testis .box-with-border {
+  margin-bottom: 10px;
 }
 
-@media only screen and (min-width: 1080px) {
-  .home-aboutus .about-sub-head {
-    margin-bottom: 40px;
+@media only screen and (min-width: 768px) {
+  .home-testis .box-with-border {
+    margin-bottom: 0;
   }
 }
 
+.home-testis .inside-box {
+  color: #363535;
+  text-align: left;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  padding-top: 60px;
+  position: relative;
+}
+
+.home-testis .inside-box span {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-testis .inside-box span {
+    font-size: 47px;
+    padding-bottom: 25px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .home-testis .inside-box span {
+    font-size: 60px;
+  }
+}
+
+.home-testis .inside-box .icon-quote {
+  position: absolute;
+  top: 10px;
+}
+
+.home-testis .splitter {
+  display: none;
+  width: 1px;
+  height: 100px;
+  background-color: #cbcbca;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-testis .splitter {
+    display: inline-block;
+  }
+}
+
+/*====================================
+=            home-aboutus            =
+====================================*/
 .home-doctors {
   background-position: center center;
   position: relative;

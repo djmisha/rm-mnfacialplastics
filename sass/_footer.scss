@@ -2,84 +2,52 @@
 
 .sticky-footer-bar {
 	z-index: 9999;
-	background: $secondaryColor;
-	height: 60px;
+	background: #50b1c0;
+	height: 70px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	display: none;
+	border-top: 5px solid #5eb5c2;
+	border-bottom: 5px solid #77c7d3;
 	@include media($desktop) {
+		color: $lightColor;
 		display: flex;
+		justify-content: center;
+		align-items: center;
 		position: fixed;
 		right: 0;
 		left: 0;
-		bottom: -60px;
+		bottom: -70px;
 		transition: all .3s ease-in-out;
 	}
 	&.change-up-sticky-footer-bar {
 		bottom: 0;
 	}
+	.bar-hdng {
+		font-size: 30px;
+		font-family: $secondaryFont;
+	}
+	i {
+		font-size: 36px;
+		margin-right: 20px;
+		position: absolute;
+		left: -40px;
+		top: -7px;
+	}
+	a {
+		color: $lightColor;
+		text-decoration: none;
+	}
 	.bar-phones {
-		font-weight: 600;
-		color: $lightColor;
-		margin-right: 40px;
-		a {
-			color: $lightColor;
-			text-decoration: none;
-			&:first-of-type {
-				margin-right: 20px;
-			}
-		}
-		position: relative;
-		svg {
-			top: -5px;
-			left: -25px;
-			position: absolute;
-			width: 17px;
-			height: 28px;
-		}
-	}
-	.bar-contact {
-		font-family: $secondaryFont;
-		color: $lightColor;
+		margin: 0 80px 0 100px;
 		font-size: 22px;
-		width: 300px;
-		text-align: left;
+		position: relative;
+		// line-height: 32px;
 	}
-	.bar-or {
-		width: 30px;
-		height: 30px;
-		background: #b46e26;
-		border-radius: 50px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: $lightColor;
-		font-family: $secondaryFont;
-		font-style: italic;
-	}
-	.button {
-		background: #fff;
+	.button-email a {
 		color: $primaryColor;
-		font-weight: 600;
-		padding-top: 3px;
-		padding-bottom: 3px;
-	}
-	.button-email, .button-patient {position: relative;}
-	.button-email svg {
-		position: absolute;
-		left: -35px;
-		width: 27px;
-		height: 27px;
-	}
-	.button-patient svg {
-		width: 13px;
-		height: 28px;
-		position: absolute;
-		left: -20px;
-	}	
-	svg {
-		path, polygon {fill:$lightColor;}
+		background: $lightColor;
 	}
 }
 

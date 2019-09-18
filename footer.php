@@ -1,29 +1,20 @@
-<!-- 
+
 <section class="sticky-footer-bar">
-	<div class="bar-contact">Contact Us</div>
+	<div class="bar-hdng">Schedule a Consultation</div>
 	<div class="bar-phones">
-		<?php inline_svg('icon-phone'); ?>
 		<?php if(have_rows('locations', 'option')): ?>
 			<?php while(have_rows('locations', 'option')): the_row(); ?>
-				<a href="<?php the_sub_field('phone_link'); ?>" class="track-outbound head-phone" data-label="Phone - Header"><?php the_sub_field('phone'); ?></a>
+				<i class="fas fa-mobile-alt"></i><a href="<?php the_sub_field('phone_link'); ?>" class="track-outbound head-phone" data-label="Phone - Header"><?php the_sub_field('phone'); ?></a>
 			<?php endwhile; ?>
 		<?php endif; ?>
 	</div>
-	<div class="bar-or">or</div>
 	<div class="bar-buttons button-email">
-		<?php inline_svg('icon-email'); ?>
 		<a href="<?php bloginfo('url'); ?>/contact-us/" class="button"> Email Us</a> 
 	</div>
-	<div class="bar-or">or</div>
-	<div class="bar-buttons button-patient">
-		<?php inline_svg('icon-patient'); ?>
-		<a href="https://mypay.poscorp.com/suburbansurgicalcare#/account/login" class="button" rel="nofollow noopener" target="_blank">Patient Portal</a>
-	</div>
-</section> -->
+</section>
 
 
 <footer>
-
 	<section class="upper-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-footer.jpg">
 		<span class="the-headline">Contact Us</span>
 		<div class="footer-form">

@@ -8,9 +8,7 @@
 	<section class="welcome" id="skiptomaincontent">
 		<div class="welcome-cta">
 			<h2><?php the_field('welcome_headline'); ?></h2>
-			<?php the_field('welcome_content'); ?>
-			<a href="<?php the_field('learn_more_button'); ?>" class="button" rel="nofollow">Learn More</a>
-				
+			<a href="<?php the_field('learn_more_button'); ?>" class="button" rel="nofollow">View My Bio and Philosophy</a>
 			</a>
 		</div>
 	</section>
@@ -18,38 +16,33 @@
 
 
 
-
-
-
-<section id="aboutus" class="home-aboutus">
-	<div>
-		<h2><?php the_field('about_headline'); ?></h2>
-		<span class="about-sub-head"><?php the_field('about_subheadline'); ?></span>
-		<?php the_field('about_content'); ?>
-		<a href="<?php the_field('about_button'); ?>" rel="nofollow" class="button">More About Us</a>
+<section class="home-testis">
+	<div class="box-with-border">
+		<div class="inside-box ib-one">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy icon-quote" data-src="<?php bloginfo('template_directory'); ?>/images/icon-quote.png" alt="ball">
+			Jess Prischmann is a <span>gifted surgeon </span> and patients absolutely adore her.
+		</div>
 	</div>
-	<div>
-		<h2><?php the_field('about_headline_2'); ?></h2>
-		<span class="about-sub-head"><?php the_field('about_sub_headline_2'); ?></span>
-		<?php the_field('about_content_2'); ?>
-		<a href="<?php the_field('learn_more_button_about'); ?>" rel="nofollow" class="button">Learn More</a>
-		<a href="<?php the_field('view_patient_gallery_button'); ?>" rel="nofollow" class="button">View Patient Gallery</a>
+	<div class="splitter"></div>
+	<div class="box-with-border">
+		<div class="inside-box">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy icon-quote" data-src="<?php bloginfo('template_directory'); ?>/images/icon-quote.png" alt="ball">
+			Your bedside manner <span>was amazing... </span> and it made a difference.
+		</div>
 	</div>
 </section>
 
 
 
-<div class="home-doctors b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-doctors.jpg">
-	<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy our-docs" data-src="<?php bloginfo('template_directory'); ?>/images/bg-thedocs.png" alt="docs">
-
-	<div class="the-docs b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-our-docs.png">
-		<h3>Meet Our Doctors</h3>
-		<?php if(have_rows('our_docs')): ?>
+<div class="home-team b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-team.jpg">
+		<h3>Meet The Team</h3>
+		<?php if(have_rows('team_members')): ?>
 			<ul>
-				<?php while(have_rows('our_docs')): the_row(); ?>
+				<?php while(have_rows('team_members')): the_row(); ?>
 					<li>
 						<a href="<?php the_sub_field('link'); ?>" rel="nofollow">
 							<?php the_sub_field('name'); ?>
+							<?php the_sub_field('title'); ?>
 						</a>
 					</li>
 				<?php endwhile; ?>
@@ -59,24 +52,8 @@
 </div>
 
 
-<section class="home-weight b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-weight.jpg">
-	<h2><span>The Weight</span> is Over</h2>
-	<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy icon-scale" data-src="<?php bloginfo('template_directory'); ?>/images/icon-scale.png" alt="docs">
-	<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy icon-patient" data-src="<?php bloginfo('template_directory'); ?>/images/icon-patient.png" alt="docs">
-	<a href="<?php the_field('view_patient_gallery_button'); ?>" rel="nofollow" class="button">View Patient Gallery</a>
-</section>
 
 
-<section class="home-orbera b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-orbera.jpg">
-	<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy icon-scale" data-src="<?php bloginfo('template_directory'); ?>/images/icon-ball.png" alt="ball">
-	<h2><?php the_field('orbera_headline'); ?></h2>
-	
-	<?php the_field('orbera_content'); ?>
-	<div class="orbera-fee">Free ORBERA&trade; Intragastic Ballon Consultation</div>
-	<div class="orbera-call">Call Today 866-716-5263</div>
-	<a href="<?php the_field('orbera_learn_more_button'); ?>" class="button" rel="nofollow">Learn More</a>
-	<a href="<?php the_field('orbera_schedule_button'); ?>" class="button" rel="nofollow">Schedule Consulation</a>
-</section>
 
 
 <section class="home-featured b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-featured.jpg">

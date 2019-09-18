@@ -2,7 +2,7 @@
 
 .masthead {
 	min-height: 124px;
-	border-top: 35px solid #d5d4c7;
+	border-top: 5px solid #d5d4c7;
 	border-bottom: 10px solid #e8e8e7;
 	background: #fff;
 	position: relative;
@@ -30,7 +30,7 @@
 	z-index: 9998;
 	background: rgba($secondaryColor, 1);
 	position: relative;
-	display: block;
+	display: none;
 	top: 0px;
 	left: 0px;
 	right: 0px;

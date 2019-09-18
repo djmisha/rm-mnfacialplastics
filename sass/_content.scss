@@ -3,7 +3,8 @@
 	@include media($desktop) {
 		margin-bottom: 0;
 		padding-bottom: 100px;
-		width: calc(100% - 350px);
+		width: calc(100%);
+		// width: calc(100% - 350px);
 		// padding-right: 50px;
 		// border: 1px solid red;
 	}

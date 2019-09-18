@@ -59,15 +59,7 @@
 		</nav>
 	</section>
 
-	<?php if(!is_front_page()): // Inside Page Logo ?>
-		<section>
-			<div class="inside-logo">
-				 <a href="<?php bloginfo('url'); ?>">
-				 	<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="logo"></a>
-				 </a>
-			</div>
-		</section>
-	<?php endif; ?>
+	
 
 </header>
 

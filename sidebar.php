@@ -1,4 +1,4 @@
-<aside>
+<!-- <aside>
 
 	<?php if(get_post_type() == 'post' ){ //Sidebar Blog Pages  ?>
 		<div class="sidebar-block blog-block">
@@ -107,4 +107,4 @@
 		</a>
 	</div>
 
-</aside>
+</aside> -->
