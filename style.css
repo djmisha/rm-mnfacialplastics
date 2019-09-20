@@ -5747,6 +5747,92 @@ aside li {
 /* ------------------------
 	Footer Layout
 ------------------------ */
+.footer-gallery {
+  background-position: center center;
+  background-size: 1100px auto;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 550px;
+  padding-top: 150px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-gallery {
+    padding-top: 0;
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 750px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .footer-gallery {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    min-height: 650px;
+    background-attachment: fixed;
+  }
+}
+
+.footer-gallery .button {
+  font-size: 25px;
+  font-family: "Playfair Display", serif;
+  padding: 25px 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-gallery .button {
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-gallery .button {
+    margin: 0 10px;
+  }
+}
+
+.footer-gallery .the-headline {
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-gallery .the-headline {
+    height: 50px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .footer-gallery .the-headline {
+    margin-right: 40px;
+    width: auto;
+    font-size: 45px;
+  }
+}
+
 .sticky-footer-bar {
   z-index: 9999;
   background: #50b1c0;
@@ -6391,15 +6477,6 @@ aside li {
 /* ------------------------
 	Home Page
 ------------------------ */
-.welcome-parallax,
-.home-testis,
-.home-news,
-.sticky-footer-bar,
-.home-team,
-footer {
-  display: none !important;
-}
-
 .home-team h2 {
   font-family: "Playfair Display", serif;
   font-size: 40px;

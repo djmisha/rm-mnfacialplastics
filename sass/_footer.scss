@@ -1,4 +1,54 @@
 
+.footer-gallery {
+	background-position: center center;
+	background-size: 1100px auto;
+	color: $lightColor;
+	display: flex;
+	flex-direction: column;
+	min-height: 550px;
+	padding-top: 150px;
+	@include media($tablet) {
+		padding-top: 0;
+		background-position: center center;
+		background-size: cover;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-items: center;
+		min-height: 750px;
+	}
+	@include media($desktop) {
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: nowrap;
+		min-height: 650px;
+		background-attachment: fixed;
+	}
+	.button {
+		font-size: 25px;
+		font-family: $secondaryFont;
+		padding: 25px 40px;
+		@include media($tablet) {
+			margin: 10px 0;
+		}
+		@include media($tablet) {
+			margin: 0 10px;
+		}
+	}
+	.the-headline {
+		margin-bottom: 40px;
+		@include media($tablet) {
+		height: 50px;
+			margin-bottom: 0;
+			width: 100%;
+		}
+		@include media($desktop) {
+			margin-right: 40px;
+			width: auto;
+			font-size: 45px;
+		}
+	}
+}
+
 
 .sticky-footer-bar {
 	z-index: 9999;

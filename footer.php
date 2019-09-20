@@ -14,6 +14,20 @@
 </section>
 
 
+<section class="footer-gallery b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-gallery.jpg">
+	<div class="the-headline">View Our Gallery</div>
+	<div>
+		<a href="#" rel="nofollow" class="button">Surgical</a>
+	</div>
+	<div>
+		<a href="#" rel="nofollow" class="button">Reconstructive</a>
+	</div>
+	<div>
+		<a href="#" rel="nofollow" class="button">Non-Surgical</a>
+	</div>
+</section>
+
+
 <footer>
 	<section class="upper-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-footer.jpg">
 		<span class="the-headline">Contact Us</span>
