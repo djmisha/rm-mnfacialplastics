@@ -3832,7 +3832,7 @@ a.page-numbers:hover,
 a.page-numbers.current:hover,
 .after-review-sprinkle .button:hover {
   text-decoration: none;
-  background: #464646;
+  background: #77c7d3;
   color: #ffffff;
 }
 
@@ -4581,29 +4581,20 @@ main,
 
 /* Inside Page Headers */
 .int-header {
-  background-color: #e7ecef;
-  background-position: center center;
-  background-repeat: no-repeat;
+  height: 300px;
+  background: #323232 url("images/bg-inside.jpg") center center no-repeat;
   background-size: cover;
-  background-position-x: right -240px;
-  height: 180px;
-  margin-top: 60px;
-  text-align: left;
-}
-
-@media only screen and (min-width: 500px) {
-  .int-header {
-    background-position: center center;
-  }
 }
 
 @media only screen and (min-width: 768px) {
   .int-header {
-    background-position: center center;
-    margin-top: 0px;
-    padding-top: 0;
-    background-size: cover;
-    height: 400px;
+    height: 440px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .int-header {
+    height: 440px;
   }
 }
 
@@ -5000,6 +4991,10 @@ main,
 /* ------------------------
 	Content
 ------------------------ */
+body.inside {
+  background: #e6e5db;
+}
+
 .content {
   padding-bottom: 60px;
 }
@@ -5046,22 +5041,21 @@ article p ~ h2 {
 }
 
 .page-title {
-  text-align: left;
+  text-align: center;
   position: relative;
   padding-bottom: 0;
-  margin-top: 20px;
   width: 100%;
-  display: inline-block;
+  display: block;
   font-family: "Playfair Display", serif;
 }
 
 .page-title .heading-text,
 .page-title h1 {
+  padding-top: 80px;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 100;
-  color: #464646;
-  display: block !important;
+  color: #ffffff;
   font-size: 30px;
   line-height: 35px;
 }
@@ -5069,16 +5063,21 @@ article p ~ h2 {
 @media only screen and (min-width: 768px) {
   .page-title .heading-text,
   .page-title h1 {
+    padding-top: 120px;
     font-size: 50px;
-    line-height: 56px;
+    line-height: 50px;
   }
 }
 
-@media only screen and (min-width: 1080px) {
-  .page-title .heading-text,
-  .page-title h1 {
-    padding-right: 350px;
-  }
+.page-title-bottom {
+  border-top: 1px solid #5eb5c2;
+  border-bottom: 1px solid #6fc1ce;
+  height: 15px;
+  background: #54bbcb;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(26%, #54bbcb), color-stop(75%, #54afbd));
+  background: linear-gradient(180deg, #54bbcb 26%, #54afbd 75%);
+  -webkit-box-shadow: 0px 5px 7px rgba(70, 70, 70, 0.4);
+          box-shadow: 0px 5px 7px rgba(70, 70, 70, 0.4);
 }
 
 .site-crumbs {
@@ -5098,41 +5097,38 @@ article p ~ h2 {
 
 @media only screen and (min-width: 768px) {
   .site-crumbs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     text-align: center;
-    padding-top: 25px !important;
+    padding-top: 35px !important;
     padding-bottom: 10px !important;
   }
 }
 
 .site-crumbs .salacious-crumb {
-  color: #4ea9b7;
+  color: #3f3f3f;
   position: relative;
   font-size: 10px;
 }
 
 @media only screen and (min-width: 768px) {
   .site-crumbs .salacious-crumb {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
 .site-crumbs .salacious-crumb a {
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
-  color: #4ea9b7;
+  color: #3f3f3f;
 }
 
 .site-crumbs .salacious-crumb .crumb-sep {
   margin: 0 10px;
-  color: #4ea9b7;
+  color: #3f3f3f;
 }
 
 .site-crumbs .salacious-crumb .current-crumb-item {
   text-decoration: none;
-  color: #4ea9b7;
+  color: #3f3f3f;
 }
 
 .interior {

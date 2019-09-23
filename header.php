@@ -11,7 +11,7 @@
 	<?php if(!is_404()): ?>
 		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Playfair+Display:400,400i|Source+Sans+Pro&display=swap' ); ?>
 	<?php endif; ?>
-	
+
 	<?php wp_head()?>
 
 </head>
@@ -59,34 +59,38 @@
 	</section>
 
 	
+	<?php if(!is_front_page() ): // Inside Page Title  ?>
+	<section class="page-title">
+		<?php if(is_front_page()): ?>
+			<?php // do nothing if homepage  ?>
+		<?php elseif(this_is('gallery-case')): ?>
+			<?php $category_title =  get_the_title($post->in_cat_ID); ?>
+			<h1><?php echo $category_title ?> Gallery</h1>
+		<?php elseif(this_is('gallery-child')): ?>
+			<?php $category_title =  get_the_title($post->in_cat_ID); ?>
+			<h1><?php echo $category_title ?>  Gallery</h1>
+		<?php elseif(this_is('gallery')): ?>
+			<h1>Before &amp; After Gallery</h1>
+		<?php elseif (is_search()): ?>
+			<div class="heading-text">Search Results</div>
+		<?php elseif (is_home() or is_archive()): ?>
+			<h1>Blog</h1>
+		<?php elseif (is_single()): ?>
+			<div class="heading-text">Blog</div>
+		<?php else: ?>
+			<h1><?php the_title();?></h1>
+		<?php endif; ?>
+	</section>
+	<?php endif; ?>
 
 </header>
 
-<?php if(!is_front_page() ): // Inside Page and H1 ?>
+<?php if(!is_front_page() ): // Inside Page Breadcrump  ?>
+<div class="page-title-bottom"></div>
 <section class="site-crumbs">
 	<?php echo __salaciouscrumb(); ?>
 </section>
-
-<section class="page-title">
-	<?php if(is_front_page()): ?>
-		<?php // do nothing if homepage  ?>
-	<?php elseif(this_is('gallery-case')): ?>
-		<?php $category_title =  get_the_title($post->in_cat_ID); ?>
-		<h1><?php echo $category_title ?> Gallery</h1>
-	<?php elseif(this_is('gallery-child')): ?>
-		<?php $category_title =  get_the_title($post->in_cat_ID); ?>
-		<h1><?php echo $category_title ?>  Gallery</h1>
-	<?php elseif(this_is('gallery')): ?>
-		<h1>Before &amp; After Gallery</h1>
-	<?php elseif (is_search()): ?>
-		<div class="heading-text">Search Results</div>
-	<?php elseif (is_home() or is_archive()): ?>
-		<h1>Blog</h1>
-	<?php elseif (is_single()): ?>
-		<div class="heading-text">Blog</div>
-	<?php else: ?>
-		<h1><?php the_title();?></h1>
-	<?php endif; ?>
-</section>
 <?php endif; ?>
+
+
 
