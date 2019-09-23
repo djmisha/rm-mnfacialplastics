@@ -1,4 +1,4 @@
-$menuHeight : 60px;
+$menuHeight : 50px;
 
 /* Start Hover Menu */
 
@@ -17,7 +17,7 @@ $menuHeight : 60px;
 		font-size: 0;
 		text-align: center;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		align-items: center;
 		height: $menuHeight;
 		> li {
@@ -25,6 +25,7 @@ $menuHeight : 60px;
 			vertical-align: top;
 			position: relative;
 			height: 100%;
+			
 			// margin-left: 10px;
 			// &:last-of-type {
 			// 	a {
@@ -60,7 +61,7 @@ $menuHeight : 60px;
 			a{	
 				display: block;
 				text-decoration: none;
-				padding: 20px 12px;
+				padding: 12px 23px;
 				transition: .25s ease-in-out background;
 				color: $lightColor; 
 				height: $menuHeight;
@@ -68,6 +69,7 @@ $menuHeight : 60px;
 				// font-weight: 600;
 				text-transform: uppercase;
 				font-family: $highlightFont;
+				// border-right: 1px solid #595858;
 				&:hover {
 					color: $lightColor;
 					background: darken( $primaryColor, 12%);

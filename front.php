@@ -50,42 +50,73 @@
 
 
 
-
-<section class="home-featured b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-featured.jpg">
-	<div class="special-headline">
-		<h2>Healthy <span>Again</span></h2>
+<section class="home-wedobest b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-wedobest.jpg">
+	<h2><?php the_field('what_we_do_best_headline'); ?></h2>
+	<?php the_field('what_we_do_best_content'); ?>
+	<div class="the-we-do-best-wrap">
+		<div class="the-whatwedobest">
+			<span>Surgical Procedures</span>
+			<?php if(have_rows('surgical_procedures')): ?>
+				<ul class="two-column">
+					<?php while(have_rows('surgical_procedures')): the_row(); ?>
+						<li>
+							<a href="<?php the_sub_field('link'); ?>" rel="nofollow"><?php the_sub_field('name'); ?></a>
+						</li>
+					<?php endwhile; ?>
+				</ul>
+			<?php endif; ?>
+		</div>
+		<div class="the-whatwedobest">
+			<span>Non Surgical Procedures</span>
+			<?php if(have_rows('nonsurgical_procedures')): ?>
+				<ul>
+					<?php while(have_rows('nonsurgical_procedures')): the_row(); ?>
+						<li>
+							<a href="<?php the_sub_field('link'); ?>" rel="nofollow"><?php the_sub_field('name'); ?></a>
+						</li>
+					<?php endwhile; ?>
+				</ul>
+			<?php endif; ?>
+		</div>
+		<div class="the-whatwedobest">
+			<span>Skin and Laser Treatments</span>
+			<?php if(have_rows('skin_and_laser_treatments')): ?>
+				<ul>
+					<?php while(have_rows('skin_and_laser_treatments')): the_row(); ?>
+						<li>
+							<a href="<?php the_sub_field('link'); ?>" rel="nofollow"><?php the_sub_field('name'); ?></a>
+						</li>
+					<?php endwhile; ?>
+				</ul>
+			<?php endif; ?>
+		</div>
 	</div>
-	<h3>Specialities/Procedures</h3>
-	<?php if(have_rows('featured_procedures_part_1')): ?>
-		<ul class="two-column">
-			<?php while(have_rows('featured_procedures_part_1')): the_row(); ?>
-				<li>
-					<a href="<?php the_sub_field('link'); ?>" rel="nofollow">
-						<?php the_sub_field('name'); ?>
-					</a>
-				</li>
+	<h3><?php the_field('store_headline'); ?></h3>
+	<?php the_field('store_content'); ?>
+	<a href="<?php the_field('link'); ?>" class="button" rel="nofollow noopener" target="_blank">Shop</a>
+</section>
+
+
+<div class="home-featured-headline">
+	<div class="the-headline">
+		Featured Procedures
+	</div>
+</div>
+
+
+<section class="home-featured">
+	<?php if(have_rows('featured_procedures')): ?>
+			<?php while(have_rows('featured_procedures')): the_row(); ?>
+			<div class="box-with-border">
+				<div class="inside-box">
+					<img src="<?php the_sub_field('image'); ?>" alt="icon">
+					<div class="the-headline"><?php the_sub_field('name'); ?></div>
+					<?php the_sub_field('content'); ?>
+					<a href="<?php the_field('link'); ?>" class="button" rel="nofollow">Learn More</a>				
+				</div>
+			</div>
 			<?php endwhile; ?>
-		</ul>
 	<?php endif; ?>
-
-	<a href="<?php the_field('view_more_button_1'); ?>" class="button" rel="nofollow">View All</a>
-
-	<h3>Bariatric Surgery</h3>
-	<?php if(have_rows('featured_procedures_part_2')): ?>
-		<ul class="two-column">
-			<?php while(have_rows('featured_procedures_part_2')): the_row(); ?>
-				<li>
-					<a href="<?php the_sub_field('link'); ?>" rel="nofollow">
-						<?php the_sub_field('name'); ?>
-					</a>
-				</li>
-			<?php endwhile; ?>
-		</ul>
-	<?php endif; ?>
-
-	<a href="<?php the_field('view_more_button_2'); ?>" class="button" rel="nofollow">View All</a>
-
-	<div class="the-overlay"></div>
 </section>
 
 

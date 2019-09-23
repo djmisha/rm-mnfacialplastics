@@ -1,8 +1,14 @@
 /* Naviagation bar */
 
+.masthead-border {
+	height: 5px;
+	width: 100%;
+	background: #d5d4c7;
+	// box-shadow: 10px 15px 70px rgba($secondaryColor, 1);
+}
+
 .masthead {
 	min-height: 124px;
-	border-top: 5px solid #d5d4c7;
 	border-bottom: 10px solid #e8e8e7;
 	background: #fff;
 	position: relative;
@@ -52,6 +58,10 @@
 		// flex-direction: row-reverse;
 	}
 	@include media($desktop) {
+		border-top: 7px solid #595858;
+		border-bottom: 7px solid #333333;
+		background: rgb(74,72,72);
+		background: linear-gradient(180deg, rgba(74,72,72,1) 26%, rgba(38,37,37,1) 75%);
 		display: block;
 	}
 	.is--ipad & {

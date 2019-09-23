@@ -13,17 +13,17 @@
 	</div>
 </section>
 
+<!-- UPDATE LINKS TO GALLERY -->
+<!-- UPDATE LINKS TO GALLERY -->
+<!-- UPDATE LINKS TO GALLERY -->
+<!-- UPDATE LINKS TO GALLERY -->
 
 <section class="footer-gallery b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-gallery.jpg">
 	<div class="the-headline">View Our Gallery</div>
-	<div>
-		<a href="#" rel="nofollow" class="button">Surgical</a>
-	</div>
-	<div>
-		<a href="#" rel="nofollow" class="button">Reconstructive</a>
-	</div>
-	<div>
-		<a href="#" rel="nofollow" class="button">Non-Surgical</a>
+	<div class="the-buttons"> 
+		<a href="#" rel="nofollow" class="button">Surgical</a> 
+		<a href="#" rel="nofollow" class="button">Reconstructive</a> 
+		<a href="#" rel="nofollow" class="button">Non-Surgical</a> 
 	</div>
 </section>
 

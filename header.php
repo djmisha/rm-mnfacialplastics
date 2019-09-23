@@ -11,9 +11,8 @@
 	<?php if(!is_404()): ?>
 		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Playfair+Display:400,400i|Source+Sans+Pro&display=swap' ); ?>
 	<?php endif; ?>
+	
 	<?php wp_head()?>
-
-
 
 </head>
 
@@ -22,7 +21,7 @@
 <a href="#skiptomaincontent" style="display:none;">Skip to main content</a>
 
 <header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header'; ?>" <?php get__header__image(); ?> >
-
+	<div class="masthead-border"></div>
 	<section class="masthead">
 		<div class="logo">
 			 <a href="<?php bloginfo('url'); ?>">
