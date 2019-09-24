@@ -29,16 +29,15 @@
 
 		<div class="cat-container">
 			<a href="<?php echo $postURL; ?>">
-					<div class="gallery-section" style="background-image: url(<?php echo $catBg; ?>)">
-				</div>
 				<h2><?php the_title();?></h2>
+				<div class="gallery-image" style="background-image: url(<?php echo $catBg; ?>)"></div>
 			</a>
 			<ul>
 				<?php
 					$cats = $rmg_cat::children( $post , array('orderby' => 'menu_order' , 'order' => 'ASC' ));//uses get_children , finds the cases & their images and attaches it to the $post object
 					foreach ($cats as $cat => $post) {
 						echo '<li>';
-							echo '<a href="'.get_permalink($post->ID).'">' . get_the_title( $post->ID ) . '</a>';
+						echo '<a href="'.get_permalink($post->ID).'">' . get_the_title( $post->ID ) . '</a>';
 						echo '</li>';
 					}
 				?>

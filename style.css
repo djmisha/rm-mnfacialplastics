@@ -3520,6 +3520,7 @@ Copyright (c) 2015 Daniel Eden
 /* ------------------------
    Variables
 ------------------------ */
+/* hide gallery CTA from bottom of gallery pages*/
 /* ------------------------
    Mixins
 ------------------------ */
@@ -7644,17 +7645,6 @@ aside li {
 /*========================================
 =            Category Archive            =
 ========================================*/
-.tmpl_type_rmg_archive h2 {
-  text-align: center;
-  margin-top: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .tmpl_type_rmg_archive h2 {
-    font-size: 26px;
-  }
-}
-
 .tmpl_type_rmg_archive .content {
   width: 100%;
   -webkit-box-pack: justify;
@@ -7713,10 +7703,6 @@ aside li {
   display: none;
 }
 
-.tmpl_type_rmg_archive .interior {
-  display: block;
-}
-
 .tmpl_type_rmg_archive .cat-container {
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -7726,13 +7712,40 @@ aside li {
 
 .tmpl_type_rmg_archive .cat-container a {
   text-decoration: none;
+  color: #000000;
 }
 
-.tmpl_type_rmg_archive .gallery-section {
-  height: 265px;
+.tmpl_type_rmg_archive .cat-container a h2 {
+  text-align: center;
+  margin-top: 0px;
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.tmpl_type_rmg_archive .cat-container .gallery-image {
+  width: 320px;
+  height: 175px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  border: 10px solid  #fdfdfd;
+  -webkit-box-shadow: 0px 5px 7px rgba(70, 70, 70, 0.1);
+          box-shadow: 0px 5px 7px rgba(70, 70, 70, 0.1);
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .tmpl_type_rmg_archive .cat-container .gallery-image {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .tmpl_type_rmg_archive .cat-container .gallery-image {
+    width: 320px;
+    height: 175px;
+  }
 }
 
 .gal-title {
@@ -7793,7 +7806,7 @@ aside li {
 @media only screen and (min-width: 768px) {
   .tmpl_type_rmg_category_child .bna-group,
   .tmpl_type_rmg_category_parent .bna-group {
-    width: 30%;
+    width: 45%;
   }
 }
 
@@ -7801,7 +7814,6 @@ aside li {
 .tmpl_type_rmg_category_parent .bna-group h2 {
   font-size: 20px;
   text-align: center;
-  color: #4ea9b7;
   margin-top: 0;
   margin-bottom: 10px;
   font-weight: 100;
@@ -7865,12 +7877,6 @@ aside li {
   margin: 0 auto;
 }
 
-.tmpl_type_rmg_category_child .bna-group:hover .hover-overlay a,
-.tmpl_type_rmg_category_parent .bna-group:hover .hover-overlay a {
-  top: calc(50% - 50px);
-  opacity: 1;
-}
-
 .tmpl_type_rmg_category_child .case-details,
 .tmpl_type_rmg_category_parent .case-details {
   margin-top: 20px;
@@ -7914,8 +7920,10 @@ aside li {
 
 .tmpl_type_rmg_category_child .img-set img,
 .tmpl_type_rmg_category_parent .img-set img {
-  width: 100%;
+  width: 95%;
   margin-bottom: 10px;
+  -webkit-box-shadow: -7px 7px 0px #4ea9b7;
+          box-shadow: -7px 7px 0px #4ea9b7;
 }
 
 .tmpl_type_rmg_category_child .img-set .before-link,
@@ -8024,6 +8032,8 @@ aside li {
 
 .tmpl_type_rmg_single_case .img-wrap > div img {
   width: 100%;
+  -webkit-box-shadow: -7px 7px 0px #4ea9b7;
+          box-shadow: -7px 7px 0px #4ea9b7;
 }
 
 .tmpl_type_rmg_single_case .img-wrap > div:nth-last-of-type(2) .bna-label, .tmpl_type_rmg_single_case .img-wrap > div:nth-last-of-type(1) .bna-label {
@@ -8109,18 +8119,11 @@ aside li {
 
 .tmpl_type_rmg_single_case .patient-details span {
   font-family: "Playfair Display", serif;
-  color: #4ea9b7;
   font-size: 25px;
   padding-bottom: 20px;
   display: block;
   border-bottom: 1px solid #ccc;
   margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .tmpl_type_rmg_single_case .patient-details span {
-    font-size: 35px;
-  }
 }
 
 .notice-body-everything h2,

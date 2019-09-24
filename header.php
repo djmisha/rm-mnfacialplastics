@@ -9,7 +9,7 @@
 	<title><?php wp_title(""); ?></title>
 
 	<?php if(!is_404()): ?>
-		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Playfair+Display:400,400i|Source+Sans+Pro&display=swap' ); ?>
+		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Playfair+Display:400,400i|Source+Sans+Pro&display=swap' ); ?>
 	<?php endif; ?>
 
 	<?php wp_head()?>
@@ -70,7 +70,7 @@
 			<?php $category_title =  get_the_title($post->in_cat_ID); ?>
 			<h1><?php echo $category_title ?>  Gallery</h1>
 		<?php elseif(this_is('gallery')): ?>
-			<h1>Before &amp; After Gallery</h1>
+			<h1>Photo Gallery</h1>
 		<?php elseif (is_search()): ?>
 			<div class="heading-text">Search Results</div>
 		<?php elseif (is_home() or is_archive()): ?>
