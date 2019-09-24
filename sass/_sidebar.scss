@@ -17,7 +17,7 @@ aside {
 		display: block;
 		margin-top: -60px;
 		> div {
-			width: 350px;
+			// width: 350px;
 		}
 	}
 
@@ -28,34 +28,37 @@ aside {
 
 
 .sidebar-block {
-	background-color: $primaryColor;
-	margin-bottom: 30px;
-	padding: 30px 0;
-	border-top: 4px solid $secondaryColor;
+	padding: 10px 0;
 	.sb-heading {
+		text-align: center;
 		font-family: $secondaryFont;
-		color: #fff;
-		padding-left: 30px;
+		color: $primaryColor;
 		font-size: 26px;
 		margin-bottom: 30px;
 	}
 	ul {
-		padding: 0 30px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-bottom: 0;
+		// border: 1px solid red;
 	}
 	li {
+		margin: 5px 10px;
+		width: auto;
 		font-size: 14px;
 		color: $primaryColor;
 		font-family: $primaryFont;
-		border-bottom: 1px solid rgba($lightColor, .1);
+		// border-bottom: 1px solid rgba($darkColor, .1);
 		&:first-of-type {
-			border-top: 1px solid rgba($lightColor, .1);
+			// border-top: 1px solid rgba($darkColor, .1);
 		}
 		a {
-			color: $lightColor;
+			color: $primaryColor;
 			text-decoration: none;
-			width: 100%;
+			// width: 100%;
 			display: block;
-			padding: 7px 0;
+			// padding: 7px 0;
 			&:hover {
 				text-decoration: underline;
 				// color: $primaryColor;
@@ -64,43 +67,3 @@ aside {
 	}
 }
 
-.sb-locations {
-	background: #e3e9ec;
-	.sb-heading {
-		color: $primaryColor;
-		position: relative;
-		i {
-			position: absolute;
-			right: 40px;
-			top: -10px;
-			font-size: 40px;
-			color: $secondaryColor;
-		}
-	}
-	.sb-the-locs {
-		border-top: 1px solid #b6babd;
-		margin: 30px;
-		span {
-			color: $secondaryColor;
-			font-weight: bold;
-		}
-	}
-	.the-loc{
-		margin-top: 20px;
-		a {
-			text-decoration: none;
-			color: $darkColor;
-			&:hover {
-				text-decoration: underline;
-			}
-	&.loc-map-directions {
-		color: $primaryColor;
-		text-decoration: underline;
-	}
-		}
-	}
-}
-
-.sb-button {
-	margin-top: 20px;
-}

@@ -31,7 +31,7 @@ body.inside {
 	h4,
 	h5,
 	h6 {
-		color: $primaryColor;
+		// color: $primaryColor;
 		font-family: $secondaryFont;
 		// font-weight: 100;
 		margin-bottom: 15px;
@@ -39,11 +39,7 @@ body.inside {
 	}
 }
 
-.from-blog h1 {
-	color: $primaryColor;
-	font-family: $secondaryFont;
-	margin-top: 0;
-}
+
 
 article > h2 {
 	margin-top: 0 !important;
@@ -139,7 +135,7 @@ article p ~ h2 {
 	}
 
 	@include media($desktop) {
-		display: flex;
+		// display: flex;
 	}
 	
 
@@ -302,6 +298,8 @@ article p ~ h2 {
 		}
 	}
 }
+
+
 
 .bnacase-imgset {
 	background: #e3e9ec;
@@ -529,6 +527,37 @@ article p ~ h2 {
 		width: auto;
 	}
 }
+
+
+
+
+.testi-container {
+	.box-with-border {
+		margin-bottom: 60px;
+	}
+	.the-testi {
+		font-family: $secondaryFont;
+		color: $primaryColor;
+		font-style: italic;
+		font-weight: 100;
+		padding: 20px 0px 0px 0px;
+		@include media($tablet) {
+			padding: 50px 100px;
+			font-size: 28px;
+			line-height: 39px;
+		}
+		position: relative;
+		img {
+			top: -40px;
+			left: 40px;
+			position: absolute;
+		}
+	}
+}
+
+
+
+
 
 
 
