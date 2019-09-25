@@ -13,7 +13,7 @@ body {
 	text-align: center;
 	font: 14px/20px $defaultfont;
 	@include media($tablet) {
-		// font: 16px/26px $defaultfont;
+		font: 14px/22px $defaultfont;
 	}
 }
 

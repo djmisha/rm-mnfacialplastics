@@ -13,20 +13,17 @@
 	</div>
 </section>
 
-<!-- UPDATE LINKS TO GALLERY -->
-<!-- UPDATE LINKS TO GALLERY -->
-<!-- UPDATE LINKS TO GALLERY -->
-<!-- UPDATE LINKS TO GALLERY -->
 
+<?php if( !this_is('gallery-case' || 'gallery-child' || 'gallery')): // Inside Page Title  ?>
 <section class="footer-gallery b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-gallery.jpg">
 	<div class="the-headline">View Our Gallery</div>
 	<div class="the-buttons"> 
-		<a href="#" rel="nofollow" class="button">Surgical</a> 
-		<a href="#" rel="nofollow" class="button">Reconstructive</a> 
-		<a href="#" rel="nofollow" class="button">Non-Surgical</a> 
+		<a href="<?php bloginfo('url'); ?>/gallery/surgical-procedures/" rel="nofollow" class="button">Surgical</a> 
+		<a href="<?php bloginfo('url'); ?>/gallery/non-surgical-procedures/" rel="nofollow" class="button">Non-Surgical</a> 
+		<a href="<?php bloginfo('url'); ?>/gallery/reconstructive-surgery/" rel="nofollow" class="button">Reconstructive</a> 
 	</div>
 </section>
-
+<?php endif; ?>
 
 <footer>
 	<section class="upper-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-footer.jpg">

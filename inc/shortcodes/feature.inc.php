@@ -8,7 +8,7 @@ function sc__feature( $atts , $content = null ){
 		ob_start();
 
 ?>
-	<div class="page-feature full-width" >
+	<div class="page-feature">
 		<div class="feature-content">
 			<?php the_field('callout_section_content'); ?>
 		</div>

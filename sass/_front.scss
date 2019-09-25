@@ -30,6 +30,25 @@ footer
 	}
 }
 
+
+
+/*========================================
+=            Box with Border             =
+========================================*/
+
+
+.box-with-border {
+	background: #fdfdfd;
+	padding: 10px;
+	box-shadow: 0px 5px 7px rgba($secondaryColor, .1);
+	.inside-box {
+		background: #fdfdfd;
+		padding: 20px;
+		border: 1px solid #d8d7cd;		
+	}
+}
+
+
 /*===============================================
 =            Welcome to my Website!             =
 ===============================================*/
@@ -102,21 +121,6 @@ footer
 }
 
 
-/*========================================
-=            Box with Border             =
-========================================*/
-
-
-.box-with-border {
-	background: #fdfdfd;
-	padding: 10px;
-	box-shadow: 0px 5px 7px rgba($secondaryColor, .1);
-	.inside-box {
-		background: #fdfdfd;
-		padding: 20px;
-		border: 1px solid #d8d7cd;		
-	}
-}
 
 
 /*===================================

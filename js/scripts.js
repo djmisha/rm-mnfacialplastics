@@ -86,11 +86,11 @@
 
 		// Change News Room 
 
-		var newsroom = document.querySelector('body.news-room h1 ');
-		console.log(newsroom);
-		if(newsroom) {
-			newsroom.innerText = 'News Room'; 
-		}
+		// var newsroom = document.querySelector('body.news-room h1 ');
+		// console.log(newsroom);
+		// if(newsroom) {
+		// 	newsroom.innerText = 'News Room'; 
+		// }
 
 		/*=============================================
 		=            Gallery Nudity Pop Up            =
@@ -149,6 +149,20 @@
 	}); // end of doc.ready
 })(jQuery);
 	
+
+
+/*Wrap A div around Custom Links*/
+
+(function () {
+	var customLinks = document.querySelector("ul.custom-links");
+	if(customLinks) {
+		 var customWrap = document.createElement('div');
+		 customWrap.classList.add('box-with-border');
+		 var customLinksParent = customLinks.parentNode;
+		 customLinksParent.insertBefore(customWrap, customLinks);
+		 customWrap.appendChild(customLinks);
+	} 
+} )();
 
 
 
