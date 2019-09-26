@@ -9,24 +9,21 @@ function testimonial( $atts , $content = null ){
 
 ?>
 
-<div class="full-width">
-<section class="onpage-reviews">
-	<div class="the-review-box">
-	<div class="the-review">
-		<?php the_field('testimonial_content'); ?>
-		<div class="the-stars">
-			<i class="fas fa-star"></i>
-			<i class="fas fa-star"></i>
-			<i class="fas fa-star"></i>
-			<i class="fas fa-star"></i>
-			<i class="fas fa-star"></i>
-		</div>
-		<div class="the-testi">
-			<span><?php the_field('testimonial_name'); ?></span><i class="fas fa-user-alt"></i>
+<div class="testi-container">
+	<div class="box-with-border">
+		<div class="inside-box">
+			<div class="the-testi">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy icon-quote" data-src="<?php bloginfo('template_directory'); ?>/images/icon-quote.png" alt="ball">
+			<?php the_field('testimonial'); ?>
+			<div class="the-stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
 		</div>
 	</div>
-	</div>
-</section>
 </div>
 		
 <?php

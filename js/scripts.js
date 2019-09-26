@@ -133,14 +133,14 @@
 
 		// Activate Fancy Box for WP Core Gallery
 
-		// $(".gallery-icon a, .blocks-gallery-item a").attr("data-fancybox", "gallery");
+		$(".gallery-icon a, .blocks-gallery-item a").attr("data-fancybox", "gallery");
 
 		// Append the Caption
 
-		// $("dl.gallery-item").each(function(event) {
-		// 	var caption = $(this).find("dd").text();
-		// 	$(this).find("dt a").attr("data-caption", caption);
-		// });
+		$("dl.gallery-item").each(function(event) {
+			var caption = $(this).find("dd").text();
+			$(this).find("dt a").attr("data-caption", caption);
+		});
 
 
 

@@ -5040,6 +5040,7 @@ article p ~ h2 {
   margin-top: 40px !important;
 }
 
+/* PAGE TITLE  */
 .page-title {
   text-align: center;
   position: relative;
@@ -5069,6 +5070,9 @@ article p ~ h2 {
   }
 }
 
+/* Site Specific Image Rules  */
+/* Site Specific Image Rules  */
+/* Site Specific Image Rules  */
 .page-title-bottom {
   border-top: 1px solid #5eb5c2;
   border-bottom: 1px solid #6fc1ce;
@@ -5080,6 +5084,8 @@ article p ~ h2 {
           box-shadow: 0px 5px 7px rgba(70, 70, 70, 0.4);
 }
 
+.is-page article.content img.attachment-medium,
+.is-page article.content img.aligncenter,
 .is-page article.content img.alignright,
 .is-page article.content img.alignleft {
   -webkit-box-shadow: -7px 7px 0px #4ea9b7;
@@ -5239,6 +5245,18 @@ article p ~ h2 {
   display: none;
 }
 
+.interior .content .box-with-border {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .interior .content .box-with-border {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
 .interior .content ul.custom-links {
   background: #fdfdfd;
   border: 1px solid #d8d7cd;
@@ -5252,27 +5270,25 @@ article p ~ h2 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style: none;
-  margin: 2em 0px;
+  margin: 0;
   padding: 40px 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .interior .content ul.custom-links {
-    padding: 50px 60px;
-    margin: 3em 0px;
+    padding: 50px 60px 30px 60px;
   }
 }
 
 .interior .content ul.custom-links li {
   text-align: center;
   padding-left: 0;
-  margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 768px) {
   .interior .content ul.custom-links li {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
     width: auto;
   }
 }
@@ -5282,7 +5298,14 @@ article p ~ h2 {
 }
 
 .interior .content ul.custom-links a {
-  padding: 5px 15px;
+  display: inline-block;
+  padding: 2px 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .interior .content ul.custom-links a {
+    padding: 7px 15px;
+  }
 }
 
 .interior .content ul.custom-links a:hover {
@@ -5464,8 +5487,13 @@ article p ~ h2 {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  background: #000000;
-  color: #ffffff;
+  color: #000000;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-feature {
+    position: relative;
+  }
 }
 
 @media only screen and (min-width: 1080px) {
@@ -5478,31 +5506,26 @@ article p ~ h2 {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .page-feature > div {
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-feature > div {
-    width: 50%;
-  }
-}
-
 .page-feature .feature-content {
-  padding: 40px 20px;
+  padding: 0px;
 }
 
 @media only screen and (min-width: 768px) {
   .page-feature .feature-content {
     padding: 50px 40px;
+    position: absolute;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .page-feature .feature-content {
     padding: 100px 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-feature .feature-content .inside-box {
+    padding: 60px;
   }
 }
 
@@ -5519,12 +5542,16 @@ article p ~ h2 {
   .page-feature .feature-content h2,
   .page-feature .feature-content h3 {
     margin-top: 0;
-    max-width: 600px;
+    max-width: 300px;
   }
 }
 
-.page-feature .feature-content p {
-  margin-top: 20px !important;
+@media only screen and (min-width: 1080px) {
+  .page-feature .feature-content p,
+  .page-feature .feature-content h2,
+  .page-feature .feature-content h3 {
+    max-width: 400px;
+  }
 }
 
 .page-feature .feature-content p a {
@@ -5542,7 +5569,7 @@ article p ~ h2 {
 }
 
 .page-feature .feature-image {
-  background-position: center center !important;
+  background-position: center right !important;
   background-repeat: no-repeat !important;
   background-size: cover;
   min-height: 300px;
@@ -5550,7 +5577,9 @@ article p ~ h2 {
 
 @media only screen and (min-width: 768px) {
   .page-feature .feature-image {
-    min-height: 400px;
+    background-size: auto;
+    min-height: 600px;
+    width: 100%;
   }
 }
 
@@ -5594,17 +5623,6 @@ article p ~ h2 {
 }
 
 /* Guttenberg Img for Mobile */
-.wp-block-image img {
-  width: 150px;
-  height: auto;
-}
-
-@media only screen and (min-width: 768px) {
-  .wp-block-image img {
-    width: auto;
-  }
-}
-
 .testi-container .box-with-border {
   margin-bottom: 60px;
 }
@@ -5630,6 +5648,18 @@ article p ~ h2 {
   top: -40px;
   left: 40px;
   position: absolute;
+}
+
+.testi-container .the-testi strong {
+  text-align: center;
+  display: block;
+  color: #000000;
+  font-weight: normal;
+}
+
+.testi-container .the-testi .the-stars {
+  text-align: center;
+  color: orange;
 }
 
 /*==============================================

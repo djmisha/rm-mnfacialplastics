@@ -40,7 +40,6 @@ body.inside {
 }
 
 
-
 article > h2 {
 	margin-top: 0 !important;
 }
@@ -48,6 +47,9 @@ article > h2 {
 article p ~ h2 {
 	margin-top: 40px !important; 
 }
+
+
+/* PAGE TITLE  */
 
 .page-title {
 	text-align: center;
@@ -73,6 +75,11 @@ article p ~ h2 {
 	}
 }
 
+
+/* Site Specific Image Rules  */
+/* Site Specific Image Rules  */
+/* Site Specific Image Rules  */
+
 .page-title-bottom {
 	border-top: 1px solid #5eb5c2;
 	border-bottom: 1px solid #6fc1ce;
@@ -84,6 +91,8 @@ article p ~ h2 {
 }
 
 
+.is-page article.content img.attachment-medium,
+.is-page article.content img.aligncenter,
 .is-page article.content img.alignright,
 .is-page article.content img.alignleft {
 	box-shadow: -7px 7px 0px $primaryColor;
@@ -216,6 +225,16 @@ article p ~ h2 {
 			display: none;
 		}
 
+		
+		.box-with-border {
+			margin-top: 40px;
+			margin-bottom: 40px;
+			@include media($tablet) {
+				margin-top: 60px;
+				margin-bottom: 60px;
+			}
+		}
+
 		ul.custom-links {
 			background: #fdfdfd;
 			border: 1px solid #d8d7cd;		
@@ -224,19 +243,21 @@ article p ~ h2 {
 			justify-content: center;
 			flex-wrap: wrap;
 			list-style: none;
-			margin: 2em 0px;
+			margin: 0;
+			// margin: 2em 0px;
 			padding: 40px 20px;
 			@include media($tablet) {
-				padding: 50px 60px;
-				margin: 3em 0px;
+				padding: 50px 60px 30px 60px;
+				// margin: 3em 0px;
 			}
 			li {
 				text-align: center;
 				padding-left: 0;
-				margin-bottom: 10px;
+				// border: 1px solid pink;
+				// margin-bottom: 30px;
 				@include media($tablet) {
-					margin-left: 20px;
-					margin-right: 20px;
+					margin-left: 30px;
+					margin-right: 30px;
 					width: auto;
 				}
 				&:before {
@@ -244,7 +265,11 @@ article p ~ h2 {
 				}
 			}
 			a {
-				padding: 5px 15px;
+				display: inline-block;
+				padding: 2px 15px;
+				@include media($tablet) {
+					padding: 7px 15px;
+				}
 				&:hover {
 					background: $primaryColor;
 					text-decoration: none;
@@ -409,8 +434,11 @@ article p ~ h2 {
 	padding: 0;
 	display: flex;
 	flex-direction: column-reverse;
-	background: $darkColor;
-	color: $lightColor;
+	// background: $darkColor;
+	color: $darkColor;
+	@include media($tablet) {
+		position: relative;
+	}
 	@include media($desktop) {
 		flex-direction: row;
 		background-size: cover !important;
@@ -418,19 +446,25 @@ article p ~ h2 {
 
 	> div {
 		@include media($tablet) {
-			width: 100%;
+			// width: 100%;
 		}
 		@include media($desktop) {
-			width: 50%;
+			// width: 50%;
 		}
 	}
 	.feature-content {
-		padding: 40px 20px;
+		padding: 0px;
 		@include media($tablet) {
 			padding: 50px 40px;
+			position: absolute;
 		}
 		@include media($desktop) {
 			padding: 100px 40px;
+		}
+		.inside-box {
+			@include media($tablet) {
+				padding: 60px;
+			}
 		}
 		p,
 		h2,
@@ -440,11 +474,14 @@ article p ~ h2 {
 			margin-top: 50px;
 			@include media($tablet) {
 				margin-top: 0;
-				max-width: 600px;
+				max-width: 300px;
+			}
+			@include media($desktop) {
+				max-width: 400px;
 			}
 		}
 		p {
-			margin-top: 20px !important;
+			// margin-top: 20px !important;
 		}
 		p a {
 			text-decoration: underline;
@@ -460,12 +497,14 @@ article p ~ h2 {
 		}
 	}
 	.feature-image {
-		background-position: center center !important;
+		background-position: center right !important;
 		background-repeat: no-repeat !important;
 		background-size: cover;
 		min-height: 300px;
 		@include media($tablet) {
-			min-height: 400px;
+			background-size: auto;
+			min-height: 600px;
+			width: 100%;
 		}
 	}
 }
@@ -507,13 +546,13 @@ article p ~ h2 {
 
 /* Guttenberg Img for Mobile */
 
-.wp-block-image img {
-	width: 150px;
-	height: auto;
-	@include media($tablet) {
-		width: auto;
-	}
-}
+// .wp-block-image img {
+// 	width: 150px;
+// 	height: auto;
+// 	@include media($tablet) {
+// 		width: auto;
+// 	}
+// }
 
 
 
@@ -538,6 +577,16 @@ article p ~ h2 {
 			top: -40px;
 			left: 40px;
 			position: absolute;
+		}
+		strong {
+			text-align: center;
+			display: block;
+			color: $darkColor;
+			font-weight: normal;
+		}
+		.the-stars {
+			text-align: center;
+			color: orange;
 		}
 	}
 }
