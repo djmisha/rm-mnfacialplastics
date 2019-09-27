@@ -265,6 +265,7 @@ article p ~ h2 {
 				}
 			}
 			a {
+				text-decoration: none;
 				display: inline-block;
 				padding: 2px 15px;
 				@include media($tablet) {
@@ -602,20 +603,6 @@ article p ~ h2 {
 ==============================================*/
 
 body.inside.tmpl_type_page_landing {
-	section.site-crumbs {
-		@include media($desktop) {
-			margin: 0 auto;
-			margin-top: 70px;
-			color: $lightColor;
-			em, span {
-				color: $lightColor;
-			}
-			&:before,
-			&:after {
-				display: none;
-			}
-		}
-	}
 	.content {
 		padding-bottom: 0;
 	}
@@ -626,33 +613,58 @@ body.inside.tmpl_type_page_landing {
 
 .tmpl_type_page_landing header {
 	@include media($desktop) {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
-		min-height: 745px;
-		color: $lightColor;
+		
 	}
 	.inside-logo {
 
 	}
-	h1 {
-		color: $lightColor;
+}
+
+
+
+
+/*================================
+=            FACELIFT            =
+================================*/
+
+
+.page-22 {
+	#Who-is-a-Good-Candidate {
+		text-align: center;	
+		.icons {
+			display: flex; 
+			align-items: center;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			> div {
+				margin-top: 40px;
+				max-width: 350px;
+				margin-left: 20px;
+				margin-right: 20px;
+				text-align: center;
+				font-size: 22px;
+				line-height: 24px;
+				font-family: $secondaryFont;
+				span {
+					font-size: 16px;
+					line-height: 18px;
+				}
+			}
+		}
+		.callout {
+			margin: 0 auto;
+			display: block;
+			margin-top: 80px;
+			max-width: 1000px;
+			font-style: italic;;
+			font-size: 25px;
+			line-height: 30px;
+			margin-bottom: 40px;
+			@include media($tablet) {
+				margin-bottom: 0px;
+				font-size: 35px;
+				line-height: 40px;
+			}
+		}
 	}
 }
-
-.tmpl_type_page_landing .page-title {
-	margin-bottom: 40px;
-}
-
-
-@include media($tablet) {
-	.page-178 iframe {
-		height: 280px;
-		scroll: none;
-		overflow: hidden;
-		float: right;
-		margin-left: 40px;
-		
-	}
-}
-
