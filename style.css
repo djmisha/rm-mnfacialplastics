@@ -5729,6 +5729,116 @@ body.inside.tmpl_type_page_landing .interior {
   }
 }
 
+.page-37 #Who-is-a-Good-Candidate {
+  text-align: center;
+}
+
+.page-37 #Who-is-a-Good-Candidate .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-37 #Who-is-a-Good-Candidate .icons {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-37 #Who-is-a-Good-Candidate .icons {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.page-37 #Who-is-a-Good-Candidate .icons > div {
+  margin-bottom: 40px;
+  margin-top: 40px;
+  max-width: 300px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 22px;
+  line-height: 24px;
+  font-family: "Playfair Display", serif;
+}
+
+.page-37 #Who-is-a-Good-Candidate .icons > div img {
+  margin-bottom: 40px;
+}
+
+.page-37 #Who-is-a-Good-Candidate .callout {
+  margin: 0 auto;
+  display: block;
+  margin-top: 80px;
+  max-width: 1000px;
+  font-style: italic;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-37 #Who-is-a-Good-Candidate .callout {
+    margin-bottom: 0px;
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+
+.page-37 #How-is-the-Surgery-Performed .feature-content {
+  padding-top: 0px;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-37 #What-is-the-Recovery {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: row-reverse !important;
+            flex-direction: row-reverse !important;
+  }
+}
+
+.page-37 #What-is-the-Recovery .feature-content {
+  padding-top: 60px;
+}
+
+.page-37 #What-is-the-Recovery .feature-image {
+  background-position: center left !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  min-height: 300px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-37 #What-is-the-Recovery .feature-image {
+    background-size: auto;
+    min-height: 600px;
+    width: 100%;
+  }
+}
+
 /* ------------------------
 	Aside
 ------------------------ */
@@ -7550,82 +7660,8 @@ aside li {
 /*=====================================
 =            Slpit Section            =
 =====================================*/
-.flexible-split-section {
-  margin-top: 40px;
+.flexible-split-section .inside-box h2 {
   margin-bottom: 40px;
-}
-
-@media only screen and (min-width: 1080px) {
-  .flexible-split-section {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100%;
-  }
-}
-
-.flexible-split-section > div {
-  width: 100%;
-}
-
-@media only screen and (min-width: 1080px) {
-  .flexible-split-section > div {
-    width: 50%;
-    height: 100%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .flexible-split-section h2 {
-    margin-bottom: 40px;
-  }
-}
-
-.flexible-split-section .with-bg {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 300px;
-}
-
-@media only screen and (min-width: 768px) {
-  .flexible-split-section .with-bg {
-    min-height: 450px;
-  }
-}
-
-.flexible-split-section .with-content {
-  padding: 40px 20px;
-}
-
-.flexible-split-section .with-content p, .flexible-split-section .with-content ul, .flexible-split-section .with-content ol {
-  margin: 0 auto;
-}
-
-.flexible-split-section .with-content p {
-  margin-top: 1em;
-}
-
-.flexible-split-section .with-content ul, .flexible-split-section .with-content ol {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-@media only screen and (min-width: 768px) {
-  .flexible-split-section .with-content {
-    padding: 50px 40px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .flexible-split-section .with-content {
-    padding: 50px 70px;
-  }
 }
 
 /*====================================

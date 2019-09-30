@@ -153,65 +153,8 @@
 =            Slpit Section            =
 =====================================*/
 .flexible-split-section {
-	margin-top: 40px;
-	margin-bottom: 40px;
-	// border: 1px solid red;
-	// background-color: $tertiaryColor;
-	@include media($tablet) {
-		// align-items: center;
-		// flex-direction: column-reverse;
-	}
-	@include media($desktop) {
-		margin-top: 100px;
-		margin-bottom: 100px;
-		display: flex;
-		align-items: center;
-		height: 100%;
-	}
-	> div {
-		width: 100%;
-		@include media($desktop) {
-			width: 50%;
-			height: 100%;
-		}
-	}
-	h2 {
-		@include media($tablet) {
-			margin-bottom: 40px;
-		}
-	}
-	.with-bg {
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		min-height: 300px;
-		@include media($tablet) {
-			min-height: 450px;
-			// min-height: 800px;
-		}
-	}
-	.with-content {
-		padding: 40px 20px;
-		p, ul, ol {
-			margin: 0 auto;
-			// max-width: 600px;
-		}
-		p {
-			margin-top: 1em;
-		}
-		ul, ol {
-			margin-top: 2em;
-			margin-bottom: 2em;
-		}
-		@include media($tablet) {
-			padding: 50px 40px;
-		}
-		@include media($desktop) {
-			padding: 50px 70px;
-		}
-		@include media($full) {
-			// padding: 50px 100px;
-		}
+	.inside-box h2 {
+		margin-bottom: 40px;
 	}
 }
 

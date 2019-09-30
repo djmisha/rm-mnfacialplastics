@@ -4,13 +4,25 @@
     $image = get_sub_field('image');
     $content = get_sub_field('content');
     $id = get_sub_field('id');
+    $bg = get_sub_field('image');
   ?>
 
-  <div class="flexible-split-section" id="<?php echo $id; ?>">
-    <div data-src="<?php echo $image; ?>" class="with-bg b-lazy">
+
+
+<section>
+  <div class="page-feature flexible-split-section" id="<?php echo $id; ?>">
+    <div class="feature-content">
+      <div class="box-with-border">
+        <div class="inside-box">
+          <h2><?php echo $headline; ?></h2> 
+            <?php echo $content; ?>
+        </div>
+      </div>
     </div>
-    <div class="with-content">
-      <h2><?php echo $headline; ?></h2> 
-        <?php echo $content; ?>
+    <div class="feature-image b-lazy" data-src="<?php echo $bg; ?>">
     </div>
   </div>
+</section>
+
+
+  
