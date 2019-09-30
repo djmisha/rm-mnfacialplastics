@@ -27,8 +27,8 @@
     <?php elseif( get_row_layout() == 'contact_us' ): ?>
       <?php require  __DIR__ . '/../partials/contact.php'; ?>
 
-      <?php elseif( get_row_layout() == 'breast_diagram' ): ?>
-        <?php require  __DIR__ . '/../partials/breast-diagram.php'; ?>
+      <?php elseif( get_row_layout() == 'procedures_repeater' ): ?>
+        <?php require  __DIR__ . '/../partials/procedures-repeater.php'; ?>
 
 		<?php endif; ?>
   <?php endwhile; ?>

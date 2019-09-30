@@ -24,9 +24,7 @@
 	<div class="masthead-border"></div>
 	<section class="masthead">
 		<div class="logo">
-			 <a href="<?php bloginfo('url'); ?>">
-			 	<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="logo"></a>
-			 </a>
+		 	<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="logo"></a>
 		</div>
 		<div class="nav-bar-locations">
 			<?php if(have_rows('locations', 'option')): ?>
