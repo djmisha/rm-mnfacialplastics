@@ -1,4 +1,4 @@
-$menuHeight : 50px;
+$menuHeight : 44px;
 
 /* Start Hover Menu */
 
@@ -36,7 +36,7 @@ $menuHeight : 50px;
 			&:hover{
 				> a {
 					color: $lightColor;
-					background: darken( $primaryColor, 10%);
+					background: $primaryColor;
 					// border-bottom: 2px solid $tertiaryColor;
 
 					// border-top: 1px solid $tertiaryColor;
@@ -61,7 +61,7 @@ $menuHeight : 50px;
 			a{	
 				display: block;
 				text-decoration: none;
-				padding: 12px 23px;
+				padding: 10px 23px;
 				transition: .25s ease-in-out background;
 				color: $lightColor; 
 				height: $menuHeight;
@@ -69,25 +69,26 @@ $menuHeight : 50px;
 				// font-weight: 600;
 				text-transform: uppercase;
 				font-family: $highlightFont;
-				// border-right: 1px solid #595858;
+				border-right: 1px solid #595858;
+				// border: 1px solid pink;
 				&:hover {
 					color: $lightColor;
-					background: darken( $primaryColor, 12%);
+					background: $primaryColor;
+					// background: darken( $primaryColor, 12%);
 				}
 			}
 		}
 	}
 
 	a {
-		// line-height: 5px;
 		font-size: 16px; 
 	}
 
 	.sub-menu {
-			background: darken( $primaryColor, 10%); //set to your own background color
+			background: $primaryColor; //set to your own background color
 			// border: 1px solid rgba($lightColor, .2); //for visual purposes.  can remove.
 			position: absolute;
-			top: 60px;
+			top: 44px;
 			left: 150px;
 			right: auto;
 			transform: translate(-50%, 0);
@@ -99,7 +100,7 @@ $menuHeight : 50px;
 			// transition: .25s ease-in-out top, .25s ease-in-out opacity;
 			> li {
 
-				border-bottom: 1px solid rgba($secondaryColor, .1); 
+				border-bottom: 1px solid rgba($lightColor, .1); 
 				//for visual purposes.  can remove.
 				&:last-of-type {
 					border-bottom:none;
@@ -154,12 +155,13 @@ $menuHeight : 50px;
 
 				a {
 					color: $lightColor;
-					background: darken( $primaryColor, 10%);
 					padding: 12px 20px !important;
+					border: none;
 				}
 				&:hover {
 					> a {
 						color: $lightColor;
+						background: $primaryAlt;
 						border-bottom: none;
 						text-decoration: none;
 					}

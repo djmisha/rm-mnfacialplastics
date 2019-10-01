@@ -3521,6 +3521,7 @@ Copyright (c) 2015 Daniel Eden
    Variables
 ------------------------ */
 /*non-surgical - side by side lists */
+/*Blog Thhumbnails*/
 /* ------------------------
    Mixins
 ------------------------ */
@@ -4470,17 +4471,17 @@ main,
   z-index: 9998;
   background: #464646;
   position: relative;
-  display: none;
   top: 0px;
   left: 0px;
   right: 0px;
-  height: 60px;
+  height: 0px;
   -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1275px) {
   .nav-bar {
+    height: 60px;
     border-top: 7px solid #595858;
     border-bottom: 7px solid #333333;
     background: #4a4848;
@@ -4491,8 +4492,7 @@ main,
 }
 
 .is--ipad .nav-bar {
-  height: 60px;
-  height: 60px;
+  height: 0px;
 }
 
 .nav-bar nav {
@@ -4501,16 +4501,13 @@ main,
 }
 
 .menu-trigger {
-  position: relative;
   padding: 0px 5px 0px 5px;
   height: 100%;
-  right: 0px;
   width: 40px;
   height: 35px;
-  margin-top: 4px;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1275px) {
   .menu-trigger {
     display: none;
   }
@@ -4627,7 +4624,7 @@ main,
 }
 
 .touch-menu .main-menu {
-  background: #4ea9b7;
+  background: #000000;
   height: 100%;
   width: 100%;
   overflow-y: scroll;
@@ -4659,7 +4656,7 @@ main,
 
 .touch-menu .main-menu .menu-item > a {
   padding: 16px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .touch-menu .main-menu .first.menu-item {
@@ -4720,7 +4717,6 @@ main,
           transform: translateY(-50%);
   right: 20px;
   margin: 0 auto;
-  color: rgba(255, 255, 255, 0.2);
 }
 
 .touch-menu .close-menu {
@@ -4728,7 +4724,7 @@ main,
   position: absolute;
   top: 10px;
   left: 15px;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.4);
   text-align: center;
   font-size: 30px;
   cursor: pointer;
@@ -4784,7 +4780,7 @@ main,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 50px;
+  height: 44px;
 }
 
 .hover-menu .main-menu > li {
@@ -4796,14 +4792,14 @@ main,
 
 .hover-menu .main-menu > li:hover > a {
   color: #ffffff;
-  background: #3d8995;
+  background: #4ea9b7;
 }
 
 .hover-menu .main-menu > li:hover > .sub-menu {
   opacity: 1;
   visibility: visible;
   z-index: 50;
-  top: 50px;
+  top: 44px;
 }
 
 .hover-menu .main-menu > li.mega-menu {
@@ -4813,19 +4809,20 @@ main,
 .hover-menu .main-menu > li a {
   display: block;
   text-decoration: none;
-  padding: 12px 23px;
+  padding: 10px 23px;
   -webkit-transition: .25s ease-in-out background;
   transition: .25s ease-in-out background;
   color: #ffffff;
-  height: 50px;
+  height: 44px;
   text-transform: none;
   text-transform: uppercase;
   font-family: "Source Sans Pro", sans-serif;
+  border-right: 1px solid #595858;
 }
 
 .hover-menu .main-menu > li a:hover {
   color: #ffffff;
-  background: #3a838e;
+  background: #4ea9b7;
 }
 
 .hover-menu a {
@@ -4833,9 +4830,9 @@ main,
 }
 
 .hover-menu .sub-menu {
-  background: #3d8995;
+  background: #4ea9b7;
   position: absolute;
-  top: 60px;
+  top: 44px;
   left: 150px;
   right: auto;
   -webkit-transform: translate(-50%, 0);
@@ -4850,7 +4847,7 @@ main,
 }
 
 .hover-menu .sub-menu > li {
-  border-bottom: 1px solid rgba(70, 70, 70, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hover-menu .sub-menu > li:last-of-type {
@@ -4902,12 +4899,13 @@ main,
 
 .hover-menu .sub-menu > li a {
   color: #ffffff;
-  background: #3d8995;
   padding: 12px 20px !important;
+  border: none;
 }
 
 .hover-menu .sub-menu > li:hover > a {
   color: #ffffff;
+  background: #77c7d3;
   border-bottom: none;
   text-decoration: none;
 }

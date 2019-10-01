@@ -3,7 +3,7 @@
 ================================*/
 
 $tablet = 768;
-$desktop = 1080;
+$desktop = 1275;
 
 // Insert Nav Dropdown Button
 

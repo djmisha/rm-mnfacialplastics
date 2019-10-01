@@ -21,7 +21,7 @@
 
 	.main-menu{
 		// background: rgba(#000, .95);
-		background: $primaryColor;
+		background: $darkColor;
 		height: 100%;
 		width: 100%;
 		overflow-y: scroll;
@@ -64,7 +64,7 @@
 		.menu-item{
 			> a{
 				padding: 16px 20px;
-				border-bottom: 1px solid rgba($lightColor, .05);
+				border-bottom: 1px solid rgba($lightColor, .15);
 			}
 		}
 
@@ -136,7 +136,7 @@
 			// left: 0;
 			right: 20px;
 			margin: 0 auto;
-			color: rgba($lightColor, .2); 
+			// color: rgba($lightColor, .2); 
 			
 		}
 	}
@@ -147,7 +147,7 @@
 		top: 10px;
 		left: 15px;
 		// padding: 14px 10px 7px 15px;
-		color: rgba($lightColor, .2); 
+		color: rgba($lightColor, .4); 
 		text-align: center;
 		font-size: 30px; // match to other font-size
 		cursor: pointer;

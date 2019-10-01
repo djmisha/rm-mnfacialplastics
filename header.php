@@ -20,7 +20,10 @@
 
 <a href="#skiptomaincontent" style="display:none;">Skip to main content</a>
 
+
+
 <header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header'; ?>" <?php get__header__image(); ?> >
+
 	<div class="masthead-border"></div>
 	<section class="masthead">
 		<div class="logo">
@@ -43,7 +46,9 @@
 			<div class="hamburger"></div>
 			<div class="hamburger"></div>
 		</div>
+		
 	</section>
+
 
 	<section class="nav-bar">
 		<nav>

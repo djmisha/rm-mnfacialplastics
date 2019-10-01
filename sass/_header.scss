@@ -47,17 +47,13 @@
 	z-index: 9998;
 	background: rgba($secondaryColor, 1);
 	position: relative;
-	display: none;
 	top: 0px;
 	left: 0px;
 	right: 0px;
-	height: 60px;
+	height: 0px;
 	transition: all .2s ease-out;
-	
-	@include media($tablet) {
-		// flex-direction: row-reverse;
-	}
-	@include media($desktop) {
+	@include media(1275px) {
+		height: 60px;
 		border-top: 7px solid #595858;
 		border-bottom: 7px solid #333333;
 		background: rgb(74,72,72);
@@ -65,8 +61,7 @@
 		display: block;
 	}
 	.is--ipad & {
-		height: 60px;
-		height: 60px;
+		height: 0px;
 	}
 	nav {
 		max-width: 1252px;
@@ -74,15 +69,14 @@
 	}
 }
 
+
+
 .menu-trigger {
-	position: relative;
 	padding: 0px 5px 0px 5px;
 	height: 100%;
-	right: 0px;
 	width: 40px;
 	height: 35px;
-	margin-top: 4px;
-	@include media($desktop) {
+	@include media(1275px) {
 		display: none;
 	}
 	.hamburger {
@@ -105,6 +99,7 @@
 		}
 	}
 }
+
 
 .nav-bar-locations {
 	font-family: $highlightFont;
