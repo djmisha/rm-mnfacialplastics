@@ -280,10 +280,11 @@ footer
 	padding-bottom: 40px;
 	color: $lightColor;
 	text-align: left;
-	background-position: center center; 
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-position: top center; 
 	@include media($tablet) {
+		background-position: center center; 
+		background-repeat: no-repeat;
+		background-size: cover;
 		padding-top: 60px;
 		padding-bottom: 100px;
 	}
@@ -454,10 +455,21 @@ footer
 			margin-bottom: 0;
 		}
 	}
+	img {
+		box-shadow: -7px 7px 0px $primaryColor;
+		margin-bottom: 40px;
+		width: 100%;
+		@include media($tablet) {
+			width: auto;
+			max-width: 100%;
+			height: auto;
+		}
+	}
 	a {
 		text-decoration: none;
 	}
 	.news-head {
+		color: $darkColor;
 		font-size: 22px;
 		font-family: $secondaryFont;
 		display: block;

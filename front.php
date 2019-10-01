@@ -122,7 +122,6 @@
 
 <section class="home-news">
 	<span class="the-headline">From Our Blog</span>
-	<div class="gars-line"></div>
 		<?php if( get_post_type() != 'post'): ?>
 			<?php
 				$args = array(
@@ -138,6 +137,7 @@
 				foreach ($postslist as $post) :  setup_postdata($post); ?>
 			<li>
 				<a href="<?php the_permalink();?>" rel="nofollow">
+					<?php the_post_thumbnail('thumbnail'); ?>
 					<span class="news-head"><?php the_title(); ?></span>
 					<?php my_excerpt(15); ?>
 					<span class="button">Learn More</span>
