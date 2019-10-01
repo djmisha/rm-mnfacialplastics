@@ -3520,7 +3520,7 @@ Copyright (c) 2015 Daniel Eden
 /* ------------------------
    Variables
 ------------------------ */
-/* hide gallery CTA from landing pages */
+/*non-surgical - side by side lists */
 /* ------------------------
    Mixins
 ------------------------ */
@@ -5507,20 +5507,26 @@ article p ~ h2 {
   }
 }
 
+@media only screen and (min-width: 1280px) {
+  .page-feature {
+    padding: 0 calc(40px + (50% - (1280px / 2)));
+  }
+}
+
 .page-feature .feature-content {
   padding: 0px;
 }
 
 @media only screen and (min-width: 768px) {
   .page-feature .feature-content {
-    padding: 50px 40px;
-    position: absolute;
+    padding: 0px 40px;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .page-feature .feature-content {
-    padding: 100px 40px;
+    position: absolute;
+    padding: 0px 40px;
   }
 }
 
@@ -5535,7 +5541,6 @@ article p ~ h2 {
 .page-feature .feature-content h3 {
   text-align: left;
   margin: 0 auto;
-  margin-top: 50px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -5570,17 +5575,37 @@ article p ~ h2 {
 }
 
 .page-feature .feature-image {
-  background-position: center right !important;
+  background-position: center center !important;
   background-repeat: no-repeat !important;
   background-size: cover;
   min-height: 300px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1080px) {
   .page-feature .feature-image {
+    background-position: center right !important;
     background-size: auto;
     min-height: 600px;
-    width: 100%;
+    width: 150%;
+  }
+}
+
+.page-feature .bg-underlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #d6d5cc;
+  height: 400px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-feature .bg-underlay {
+    opacity: 1;
+    height: 580px;
+    top: 20px;
   }
 }
 
@@ -5729,6 +5754,57 @@ body.inside.tmpl_type_page_landing .interior {
   }
 }
 
+@media only screen and (min-width: 1080px) {
+  .page-22 #What-is-the-Recovery {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    background-size: cover !important;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-22 #What-is-the-Recovery .feature-content {
+    padding-top: 60px;
+  }
+}
+
+.page-22 #What-is-the-Recovery .feature-image {
+  background-position: center left !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  min-height: 300px;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-22 #What-is-the-Recovery .feature-image {
+    background-size: auto;
+    min-height: 600px;
+    width: 100%;
+  }
+}
+
+.page-22 #What-is-the-Recovery .bg-underlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #d6d5cc;
+  height: 400px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-22 #What-is-the-Recovery .bg-underlay {
+    opacity: 1;
+    height: 380px;
+    top: 100px;
+  }
+}
+
+/* OTTOPLASTY PAGE*/
 .page-37 #Who-is-a-Good-Candidate {
   text-align: center;
 }
@@ -5812,6 +5888,13 @@ body.inside.tmpl_type_page_landing .interior {
 }
 
 @media only screen and (min-width: 1080px) {
+  .page-37 #How-is-the-Surgery-Performed .bg-underlay {
+    opacity: 1;
+    height: 530px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
   .page-37 #What-is-the-Recovery {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: reverse !important;
@@ -5836,6 +5919,94 @@ body.inside.tmpl_type_page_landing .interior {
     background-size: auto;
     min-height: 600px;
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-37 #What-is-the-Recovery .bg-underlay {
+    opacity: 1;
+    top: 100px;
+    height: 390px;
+  }
+}
+
+/* NON SURGICAL LANDING PAGE */
+.page-41 .flexible-jump-links:first-of-type .jump-link-list ul:before {
+  content: 'Injectables';
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+}
+
+.page-41 .flexible-jump-links:nth-of-type(2) .jump-link-list ul:before {
+  content: 'Skin Treatments';
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-41 #injectables .feature-content {
+    padding-top: 80px;
+  }
+}
+
+.page-41 #injectables .bg-underlay {
+  background-color: #323232;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-41 #injectables .bg-underlay {
+    opacity: 1;
+    top: 120px;
+    height: 360px;
+  }
+}
+
+.page-41 #not-sure, .page-41 #unsurev {
+  border: 10px solid #fff;
+  padding: 40px !important;
+  background: #e7e6dd;
+  -webkit-box-shadow: 0px 5px 7px rgba(70, 70, 70, 0.1);
+          box-shadow: 0px 5px 7px rgba(70, 70, 70, 0.1);
+}
+
+.page-41 #not-sure h2, .page-41 #unsurev h2 {
+  text-align: center;
+}
+
+.page-41 #not-sure p, .page-41 #unsurev p {
+  text-align: center;
+}
+
+.page-41 #not-sure p .button, .page-41 #unsurev p .button {
+  display: inline-block;
+}
+
+.page-41 #not-sure .button, .page-41 #unsurev .button {
+  display: none;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-41 #Skin-Treatments .feature-content {
+    padding-top: 20px;
+  }
+}
+
+.page-41 #Skin-Treatments .bg-underlay {
+  background-color: #323232;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-41 #Skin-Treatments .bg-underlay {
+    opacity: 1;
+    top: 120px;
+    height: 360px;
   }
 }
 
@@ -7637,6 +7808,65 @@ aside li {
 
 .flexible-multicolumn ul a:hover {
   color: #ffffff;
+}
+
+.flexible-procedures-repeater ul {
+  padding: 0;
+  margin: 0 !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .flexible-procedures-repeater ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.flexible-procedures-repeater li {
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 100px !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .flexible-procedures-repeater li {
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .flexible-procedures-repeater li {
+    width: 45%;
+  }
+}
+
+.flexible-procedures-repeater li h2, .flexible-procedures-repeater li p {
+  text-align: left;
+}
+
+.flexible-procedures-repeater li .button {
+  margin-top: 10px;
+}
+
+.flexible-procedures-repeater li h2 {
+  margin-bottom: 20px;
+}
+
+.flexible-procedures-repeater img {
+  text-align: center;
+  position: relative;
+  left: calc( 50% - 75px);
+  margin-bottom: 10px;
+}
+
+.flexible-procedures-repeater ul li:before {
+  display: none;
 }
 
 /*============================================================

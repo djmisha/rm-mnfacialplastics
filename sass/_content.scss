@@ -429,7 +429,9 @@ article p ~ h2 {
 
 
 
+.page-feature-wrap {
 
+}
 .page-feature {
 	margin-top: 40px;
 	padding: 0;
@@ -444,6 +446,9 @@ article p ~ h2 {
 		flex-direction: row;
 		background-size: cover !important;
 	}
+	@include media(1280px) {
+		padding: 0 calc(40px + (50% - (1280px / 2)));
+	}
 
 	> div {
 		@include media($tablet) {
@@ -456,11 +461,11 @@ article p ~ h2 {
 	.feature-content {
 		padding: 0px;
 		@include media($tablet) {
-			padding: 50px 40px;
-			position: absolute;
+			padding: 0px 40px;
 		}
 		@include media($desktop) {
-			padding: 100px 40px;
+			position: absolute;
+			padding: 0px 40px;
 		}
 		.inside-box {
 			@include media($tablet) {
@@ -472,7 +477,7 @@ article p ~ h2 {
 		h3 {
 			text-align: left;
 			margin: 0 auto;
-			margin-top: 50px;
+			// margin-top: 50px;
 			@include media($tablet) {
 				margin-top: 0;
 				max-width: 300px;
@@ -498,14 +503,33 @@ article p ~ h2 {
 		}
 	}
 	.feature-image {
-		background-position: center right !important;
+		background-position: center center !important;
 		background-repeat: no-repeat !important;
 		background-size: cover;
 		min-height: 300px;
 		@include media($tablet) {
+			// min-height: 600px;
+		}
+		@include media($desktop) {
+			background-position: center right !important;
 			background-size: auto;
 			min-height: 600px;
-			width: 100%;
+			width: 150%;
+		}
+	}
+	.bg-underlay {
+		position: absolute;
+		left: 0;
+		right: 0;
+		background: #d6d5cc;
+		height: 400px;
+		width: 100%;
+		z-index: -1;
+		opacity: 0;
+		@include media($desktop) {
+			opacity: 1;
+			height: 580px;
+			top: 20px;
 		}
 	}
 }
@@ -667,9 +691,59 @@ body.inside.tmpl_type_page_landing {
 			}
 		}
 	}
+	#How-is-the-Surgery-Performed {
+		.feature-content {
+		}
+	}
+	#What-is-the-Recovery {
+		@include media($desktop) {
+			flex-direction: row-reverse;
+			background-size: cover !important;
+		}
+		.feature-content {
+			@include media($desktop) {
+				padding-top: 60px;
+			}
+		}
+		.feature-image {
+			background-position: center left !important;
+			background-repeat: no-repeat !important;
+			background-size: cover;
+			min-height: 300px;
+			@include media($desktop) {
+				background-size: auto;
+				min-height: 600px;
+				width: 100%;
+			}
+		}
+		.bg-underlay {
+			position: absolute;
+			left: 0;
+			right: 0;
+			background: #d6d5cc;
+			height: 400px;
+			width: 100%;
+			z-index: -1;
+			opacity: 0;
+			@include media($desktop) {
+				opacity: 1;
+				height: 380px;
+				top: 100px;
+			}
+		}
+	}
+	// #Frequently-Asked-Questions {
+	// 	display: none;
+	// 	p span.callout {
+	// 		@include media($tablet) {
+	// 			font-size: 25px !important;
+	// 		}
+	// 	}
+	// }
 }
 
 
+/* OTTOPLASTY PAGE*/
 
 .page-37 {
 	#Who-is-a-Good-Candidate {
@@ -724,6 +798,12 @@ body.inside.tmpl_type_page_landing {
 		.feature-content {
 			padding-top: 0px;
 		}
+		.bg-underlay {
+			@include media($desktop) {
+				opacity: 1;
+				height: 530px;
+			}
+		}
 	}
 	#What-is-the-Recovery {
 		@include media($desktop) {
@@ -743,5 +823,91 @@ body.inside.tmpl_type_page_landing {
 				width: 100%;
 			}
 		}
+		.bg-underlay {
+			@include media($desktop) {
+				opacity: 1;
+				top: 100px;
+				height: 390px;
+			}
+		}
 	}
 }
+
+
+/* NON SURGICAL LANDING PAGE */
+
+.page-41 {
+	.flexible-jump-links:first-of-type {.jump-link-list{
+		ul:before {
+			content: 'Injectables';
+			width: 100%;
+			text-align: center;
+			font-size: 18px;
+			font-family: $secondaryFont;
+			margin-bottom: 20px;
+		}
+	}}
+	.flexible-jump-links:nth-of-type(2) {.jump-link-list{
+		ul:before {
+			content: 'Skin Treatments';
+			width: 100%;
+			text-align: center;
+			font-size: 18px;
+			font-family: $secondaryFont;
+			margin-bottom: 20px;
+		}
+	}}
+	#injectables {
+		@include media($desktop) {
+			.feature-content {
+				padding-top: 80px;
+			}
+		}
+		.bg-underlay {
+			background-color: #323232;
+			@include media($desktop) {
+				opacity: 1;
+				top: 120px;
+				height: 360px;
+			}
+		}
+	}
+	#not-sure, #unsurev {
+		border: 10px solid #fff;
+		padding: 40px !important;
+		background: #e7e6dd;
+		box-shadow: 0px 5px 7px rgba($secondaryColor, .1);
+		h2 {
+			text-align: center;
+		}
+		p {
+			text-align: center;
+		}
+		p .button {
+			display: inline-block;
+		}
+		.button {
+			display: none;
+			margin:0 auto; 
+		}
+	}
+	#Skin-Treatments {
+		@include media($desktop) {
+			.feature-content {
+				padding-top: 20px;
+			}
+		}
+		.bg-underlay {
+			background-color: #323232;
+			@include media($desktop) {
+				opacity: 1;
+				top: 120px;
+				height: 360px;
+			}
+		}
+
+	}
+}
+
+
+

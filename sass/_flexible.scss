@@ -132,6 +132,49 @@
 }
 
 
+
+.flexible-procedures-repeater {
+	ul {
+		padding: 0;
+		margin: 0 !important;
+		@include media($tablet) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+	li {
+		padding: 0 !important;
+		margin: 0 !important;
+		// border: 1px solid red;
+		margin-bottom: 100px !important;
+		@include media($tablet) {
+			width: 48%;
+		}
+		@include media($desktop) {
+			width: 45%;
+			
+		}
+		h2, p { text-align: left; }
+		.button {
+			margin-top: 10px;
+		}
+		h2  {
+			margin-bottom: 20px;
+		}
+	}
+	img {
+		text-align: center;
+		position: relative;
+		left: calc( 50% - 75px;);
+		margin-bottom: 10px;
+	}
+
+	ul li {&:before {display: none; } }
+}
+
+
+
 /*============================================================
 =            Flexible Styled and Featured Section            =
 ============================================================*/
