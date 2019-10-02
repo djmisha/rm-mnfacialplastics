@@ -33,7 +33,6 @@
 							'order'           => 'DESC'
 						)); ?>
 					</ul>
-
 				</div>
 			</div>
 		</div>
@@ -61,13 +60,16 @@
 				$wp__list_pages = $childPages;
 			endif;
 			if( !empty($wp__list_pages) ): ?>
-				
-				<div class="sidebar-block related-pages">
-					<div class="sb-heading">Related Pages</div>
-					<div>
-						<ul class="list-unstyled">
-							<?php echo $wp__list_pages; ?>
-						</ul>
+				<div class="box-with-border">
+					<div class="inside-box">
+						<div class="sidebar-block related-pages">
+							<div class="sb-heading">Related Pages</div>
+							<div>
+								<ul class="list-unstyled">
+									<?php echo $wp__list_pages; ?>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 

@@ -9,7 +9,7 @@ function sc__bnaslideshow( $atts , $content = null ){
 
 ?>
 
-	<div class="bna-slideshow">
+	<div class="bna-slideshow owl-carousel bna-rotator">
 		<?php if(have_rows('bna_slideshow')): ?>
 			<?php while(have_rows('bna_slideshow')): the_row(); 
 				$shortcode = get_sub_field('bna_shortcode');

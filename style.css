@@ -3521,9 +3521,6 @@ Copyright (c) 2015 Daniel Eden
    Variables
 ------------------------ */
 /*non-surgical - side by side lists */
-/*Blog Thhumbnails*/
-/*BNA SLideshow*/
-/*Set Dark Color*/
 /* ------------------------
    Mixins
 ------------------------ */
@@ -3974,7 +3971,7 @@ footer .seaforms_confirmation_message {
 }
 
 .seaforms_confirmation_message {
-  border: 1px solid #000000;
+  border: 1px solid #3f3f3f;
   padding: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -4066,11 +4063,11 @@ footer .seaforms_confirmation_message {
 }
 
 .seaforms span {
-  color: #000000;
+  color: #3f3f3f;
 }
 
 .seaforms label {
-  color: #000000;
+  color: #3f3f3f;
   margin-bottom: 1px;
   display: block;
 }
@@ -4135,7 +4132,7 @@ footer .seaforms_confirmation_message {
 .seaforms .type-singlelinetext ::-webkit-input-placeholder,
 .seaforms .type-textarea ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(63, 63, 63, 0.5);
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
 }
@@ -4143,7 +4140,7 @@ footer .seaforms_confirmation_message {
 .seaforms .type-singlelinetext :-moz-placeholder,
 .seaforms .type-textarea :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(63, 63, 63, 0.5);
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
   opacity: 1;
@@ -4152,7 +4149,7 @@ footer .seaforms_confirmation_message {
 .seaforms .type-singlelinetext ::-moz-placeholder,
 .seaforms .type-textarea ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(63, 63, 63, 0.5);
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
   opacity: 1;
@@ -4161,7 +4158,7 @@ footer .seaforms_confirmation_message {
 .seaforms .type-singlelinetext :-ms-input-placeholder,
 .seaforms .type-textarea :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(63, 63, 63, 0.5);
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
 }
@@ -4182,7 +4179,7 @@ footer .seaforms_confirmation_message {
 }
 
 .seaforms .type-selectbox option {
-  color: #000000 !important;
+  color: #3f3f3f !important;
 }
 
 .seaforms .type-checkbox {
@@ -4263,7 +4260,7 @@ html {
 }
 
 body {
-  color: #000000;
+  color: #3f3f3f;
   background-color: #ffffff;
   min-width: 320px;
   text-align: center;
@@ -4544,7 +4541,7 @@ main,
 
 .nav-bar-locations a {
   text-decoration: none;
-  color: #000000;
+  color: #3f3f3f;
 }
 
 .nav-bar-locations a:hover {
@@ -4626,7 +4623,7 @@ main,
 }
 
 .touch-menu .main-menu {
-  background: #000000;
+  background: #3f3f3f;
   height: 100%;
   width: 100%;
   overflow-y: scroll;
@@ -5379,6 +5376,23 @@ article p ~ h2 {
   }
 }
 
+.bna-slideshow .owl-nav {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+
+.bna-slideshow .owl-nav > div {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .bnacase-imgset {
   border-radius: 4px;
   clear: both;
@@ -5436,7 +5450,7 @@ article p ~ h2 {
 }
 
 .bnacase-imgset .before span, .bnacase-imgset .after span {
-  color: #000000;
+  color: #3f3f3f;
   font-family: "Playfair Display", serif;
   text-transform: none;
   font-size: 16px;
@@ -5488,7 +5502,7 @@ article p ~ h2 {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  color: #000000;
+  color: #3f3f3f;
 }
 
 @media only screen and (min-width: 768px) {
@@ -5541,6 +5555,7 @@ article p ~ h2 {
 .page-feature .feature-content h3 {
   text-align: left;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -5679,7 +5694,7 @@ article p ~ h2 {
 .testi-container .the-testi strong {
   text-align: center;
   display: block;
-  color: #000000;
+  color: #3f3f3f;
   font-weight: normal;
 }
 
@@ -5931,7 +5946,29 @@ body.inside.tmpl_type_page_landing .interior {
 }
 
 /* NON SURGICAL LANDING PAGE */
-.page-41 .flexible-jump-links:first-of-type .jump-link-list ul:before {
+@media only screen and (min-width: 1080px) {
+  .page-41 .flexible-jump-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .page-41 .flexible-jump-links .jump-links-content {
+    width: 100%;
+  }
+  .page-41 .flexible-jump-links .box-with-border {
+    width: 45%;
+    height: auto;
+  }
+}
+
+.page-41 .flexible-jump-links .box-with-border:first-of-type .jump-link-list ul:before {
   content: 'Injectables';
   width: 100%;
   text-align: center;
@@ -5940,7 +5977,7 @@ body.inside.tmpl_type_page_landing .interior {
   margin-bottom: 20px;
 }
 
-.page-41 .flexible-jump-links:nth-of-type(2) .jump-link-list ul:before {
+.page-41 .flexible-jump-links .box-with-border:nth-of-type(2) .jump-link-list ul:before {
   content: 'Skin Treatments';
   width: 100%;
   text-align: center;
@@ -6045,7 +6082,7 @@ aside li {
 .sidebar-block .sb-heading {
   text-align: center;
   font-family: "Playfair Display", serif;
-  color: #000000;
+  color: #3f3f3f;
   font-size: 26px;
   margin-bottom: 30px;
 }
@@ -6703,7 +6740,7 @@ aside li {
 }
 
 .contact-us .seaforms .type-text > p {
-  color: #000000;
+  color: #3f3f3f;
   margin: 0;
   margin-bottom: 20px;
 }
@@ -6818,7 +6855,7 @@ aside li {
 .gmaps {
   width: 100%;
   margin-bottom: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(63, 63, 63, 0.2);
 }
 
 .gmaps iframe {
@@ -7193,6 +7230,28 @@ aside li {
   color: #4ea9b7;
   font-weight: bold;
   font-size: 18px;
+  display: block;
+  position: relative;
+  padding: 10px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-wedobest .the-whatwedobest span {
+    padding: 0;
+  }
+}
+
+.home-wedobest .the-whatwedobest span:before {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-wedobest .the-whatwedobest span:before {
+    display: none;
+  }
 }
 
 .home-wedobest .the-whatwedobest li a {
@@ -7209,10 +7268,12 @@ aside li {
 
 .home-wedobest .the-whatwedobest ul {
   margin-bottom: 40px;
+  display: none;
 }
 
 @media only screen and (min-width: 1080px) {
   .home-wedobest .the-whatwedobest ul {
+    display: block;
     width: 240px;
     margin-bottom: 0;
   }
@@ -7268,28 +7329,32 @@ aside li {
 
 .home-featured {
   padding-top: 60px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   background-color: #e8e8e7;
   text-align: left;
+  position: relative;
+}
+
+.home-featured .owl-item {
+  max-width: 100%;
+  margin-bottom: 40px;
+  height: auto;
+}
+
+.home-featured .owl-nav {
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.home-featured > div {
-  max-width: 100%;
-  margin-bottom: 40px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-featured > div {
-    max-width: 48%;
-  }
+.home-featured .owl-nav > div {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .home-featured .inside-box {
@@ -7303,7 +7368,7 @@ aside li {
 
 .home-featured .inside-box img {
   text-align: center;
-  margin: 0 auto;
+  width: auto;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -7393,7 +7458,7 @@ aside li {
 }
 
 .home-news .news-head {
-  color: #000000;
+  color: #3f3f3f;
   font-size: 22px;
   font-family: "Playfair Display", serif;
   display: block;
@@ -7401,7 +7466,7 @@ aside li {
 }
 
 .home-news p {
-  color: #000000;
+  color: #3f3f3f;
 }
 
 /* ------------------------
@@ -7447,7 +7512,7 @@ aside li {
 .tmpl_type_archive h2 a,
 .from-blog h2 a {
   text-decoration: none;
-  color: #000000;
+  color: #3f3f3f;
 }
 
 .blog .post-snippet,
@@ -7555,7 +7620,7 @@ aside li {
 .tmpl_type_archive .post-snippet .excerpt .para a,
 .from-blog .post-snippet .excerpt .para a {
   text-decoration: none !important;
-  color: #000000;
+  color: #3f3f3f;
 }
 
 .blog .post-snippet .excerpt .para a span,
@@ -8073,7 +8138,7 @@ aside li {
 
 .tmpl_type_rmg_archive .cat-container a {
   text-decoration: none;
-  color: #000000;
+  color: #3f3f3f;
 }
 
 .tmpl_type_rmg_archive .cat-container a h2 {
@@ -8118,7 +8183,7 @@ aside li {
 .gal-title h2 {
   font-family: "Playfair Display", serif;
   text-align: center;
-  color: #000000;
+  color: #3f3f3f;
   margin-top: 40px;
 }
 
@@ -8489,11 +8554,11 @@ aside li {
 
 .notice-body-everything h2,
 .notice-body-everything p {
-  color: #000000;
+  color: #3f3f3f;
 }
 
 .gallery-title {
-  background: #000000;
+  background: #3f3f3f;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;

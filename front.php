@@ -104,7 +104,7 @@
 </div>
 
 
-<section class="home-featured">
+<section class="home-featured owl-rotator owl-carousel">
 	<?php if(have_rows('featured_procedures')): ?>
 			<?php while(have_rows('featured_procedures')): the_row(); ?>
 			<div class="box-with-border">

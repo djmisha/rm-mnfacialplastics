@@ -315,6 +315,23 @@ footer
 			color: $primaryColor;
 			font-weight: bold;
 			font-size: 18px;
+			// border: 1px solid pink;
+			display: block;
+			position: relative;
+			// margin-bottom: 20px;
+			padding: 10px 0;
+			@include media($tablet) {
+				padding: 0;
+			}
+			&:before {
+				content: '+';
+				position: absolute;
+				right: 20px;
+				font-size: 20px;
+				@include media($tablet) {
+					display: none;
+				}
+			}
 		}
 		li a {
 			display: block;
@@ -329,7 +346,9 @@ footer
 		}
 		ul {
 			margin-bottom: 40px;
+			display: none;
 			@include media($desktop) {
+				display: block;
 				width: 240px;
 				margin-bottom: 0;
 			}
@@ -380,17 +399,31 @@ footer
 
 .home-featured {
 	padding-top: 60px;
-	padding-bottom: 20px;
+	padding-bottom: 40px;
 	background-color: #e8e8e7;
 	text-align: left;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	> div {
+	// display: flex;
+	// justify-content: space-between;
+	// flex-wrap: wrap;
+	position: relative;
+	.owl-item {
 		max-width: 100%;
 		margin-bottom: 40px;
+		height: auto;
 		@include media($tablet) {
-			max-width: 48%;
+			// width: 48%;
+			// min-height: 400px;
+			// max-width: 500px;
+		}
+	}
+	.owl-nav {
+		margin: 0 auto;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		> div {
+			margin-left: 5px;
+			margin-right: 5px;
 		}
 	}
 	.inside-box {
@@ -400,8 +433,11 @@ footer
 			margin-top: 40px;
 		}
 		img {
+			// border: 1px solid pink;
 			text-align: center;
-			margin: 0 auto;
+			// margin: 0 auto;
+			// max-width: 100%;
+			width: auto;
 			@include media($desktop) {
 				float: right;
 				margin-left: 20px;

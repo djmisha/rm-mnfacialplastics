@@ -40,7 +40,7 @@
 		=            Sticky             =
 		===================================*/
 
-		/* Change Up Navigation on Scroll Down */
+		/* Change Up Footer on Scroll Down */
 		$(window).scroll(function () {
 			if ($(window).scrollTop() > 150 && $('html').hasClass('not--device') 
 				&& 
@@ -54,6 +54,65 @@
 	    });
 
 
+		// Homepage Featured Procedures, slide open on mobile 
+		if ($(window).width() < 768) {
+			$('.the-whatwedobest span').click(function(event) {
+				/* Act on the event */
+				event.preventDefault;
+				$(this).parent().find('ul').slideToggle();
+			});
+		}
+
+
+
+		/* --------------------------------------------------
+			Owl Carousel HomePage
+		-------------------------------------------------- */
+		
+			$('.owl-rotator').owlCarousel({
+				items:2,
+				margin:20,
+				lazyLoad:true,
+				loop:true,
+				nav:true,
+				dots:false,
+				autoplay: true,
+				autoplayTimeout: 9000,
+				smartSpeed: 1000,
+				navText : ["<span class=\"button\"><i class='fa fa-angle-left'></i></span>"
+							,"<span class=\"button\"><i class='fa fa-angle-right'></i></span>"],
+				responsive:{
+				        0:{
+				            items:1
+				        },
+				        768:{
+				            items:2
+				        }
+				    }
+			});
+
+
+			$('.bna-rotator').owlCarousel({
+				items:2,
+				margin:20,
+				// lazyLoad:true,
+				loop:true,
+				nav:true,
+				dots:false,
+				autoplay: true,
+				autoplayTimeout: 9000,
+				smartSpeed: 1000,
+				navText : ["<span class=\"button\"><i class='fa fa-angle-left'></i></span>"
+							,"<span class=\"button\"><i class='fa fa-angle-right'></i></span>"],
+				responsive:{
+				        0:{
+				            items:1
+				        },
+				        768:{
+				            items:2
+				        }
+				    }
+			});
 	
 		
 		/*================================
@@ -161,6 +220,20 @@
 		 var customLinksParent = customLinks.parentNode;
 		 customLinksParent.insertBefore(customWrap, customLinks);
 		 customWrap.appendChild(customLinks);
+	} 
+} )();
+
+
+
+/*Side By Site Lists on Desktop non Surgical Pages*/
+
+(function () {
+	var customListOne = document.querySelector("article .flexible-jump-links:nth-of-type(1)");
+	var customListTwo = document.querySelector("article .flexible-jump-links:nth-of-type(2) .box-with-border");
+	
+	console.log(customListTwo);
+	if(customListTwo) {
+		customListOne.appendChild(customListTwo)
 	} 
 } )();
 

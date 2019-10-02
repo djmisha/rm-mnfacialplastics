@@ -329,6 +329,17 @@ article p ~ h2 {
 		display: flex;
 		justify-content: space-between;
 	}
+	.owl-nav {
+		margin: 0 auto;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		margin-bottom: 40px;
+		> div {
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+	}
 }
 
 
@@ -476,6 +487,7 @@ article p ~ h2 {
 			text-align: left;
 			margin: 0 auto;
 			// margin-top: 50px;
+			margin-bottom: 40px;
 			@include media($tablet) {
 				margin-top: 0;
 				max-width: 300px;
@@ -835,7 +847,22 @@ body.inside.tmpl_type_page_landing {
 /* NON SURGICAL LANDING PAGE */
 
 .page-41 {
-	.flexible-jump-links:first-of-type {.jump-link-list{
+	.flexible-jump-links {
+		@include media($desktop) {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-around;
+			.jump-links-content {
+				width: 100%;
+			}
+			.box-with-border {
+				width: 45%;
+				height: auto;
+			}
+		}
+	}
+	.flexible-jump-links .box-with-border:first-of-type {.jump-link-list{
 		ul:before {
 			content: 'Injectables';
 			width: 100%;
@@ -845,7 +872,7 @@ body.inside.tmpl_type_page_landing {
 			margin-bottom: 20px;
 		}
 	}}
-	.flexible-jump-links:nth-of-type(2) {.jump-link-list{
+	.flexible-jump-links .box-with-border:nth-of-type(2) {.jump-link-list{
 		ul:before {
 			content: 'Skin Treatments';
 			width: 100%;
