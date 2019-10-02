@@ -233,7 +233,8 @@
 	
 	console.log(customListTwo);
 	if(customListTwo) {
-		customListOne.appendChild(customListTwo)
+		customListOne.appendChild(customListTwo);
+		customListTwo.classList.add('second-list');
 	} 
 } )();
 

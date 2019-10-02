@@ -11,7 +11,6 @@ body.inside {
 		width: calc(100%);
 		// width: calc(100% - 350px);
 		// padding-right: 50px;
-		// border: 1px solid red;
 	}
 	b,
 	strong {
@@ -143,22 +142,13 @@ article p ~ h2 {
 	text-align: left;
 	background-repeat: no-repeat;
 	padding-top: 10px;
-
 	@include media($tablet) {
 		padding-top: 20px;
 	}
-
 	@include media($desktop) {
 		// display: flex;
 	}
-	
-
 	.content {
-		@include media($desktop) {
-			// width: calc( 100% - 300px);
-			// margin-right: 100px;
-			padding-right: 50px;
-		}
 		overflow-wrap: break-word;
 		word-wrap: break-word;
 		a:hover {
@@ -424,11 +414,11 @@ article p ~ h2 {
 		margin-bottom: 100px;
 	}
 	@include media($desktop) {
-		left: calc(((40px + (50vw - (#{$desktop} / 2)))) * -1);
+		// left: calc(((40px + (50vw - (#{$desktop} / 2)))) * -1);
 		
 	}
 	@include media(1280px) {
-		// left: calc(((40px + (50vw - (1280px / 2)))) * -1);
+		left: calc(((40px + (50vw - (1280px / 2)))) * -1);
 		// background-size: cover;
 	}
 	@include media($full) {
@@ -457,6 +447,8 @@ article p ~ h2 {
 	}
 	@include media(1280px) {
 		padding: 0 calc(40px + (50% - (1280px / 2)));
+		// left: calc(((40px + (50vw - (1280px / 2)))) * -1);
+		// right: 0;
 	}
 
 	> div {
@@ -639,6 +631,7 @@ article p ~ h2 {
 body.inside.tmpl_type_page_landing {
 	.content {
 		padding-bottom: 0;
+		padding-right: 0;
 	}
 	.interior {
 		padding-bottom: 0;
@@ -862,7 +855,7 @@ body.inside.tmpl_type_page_landing {
 			}
 		}
 	}
-	.flexible-jump-links .box-with-border:first-of-type {.jump-link-list{
+	.flexible-jump-links .box-with-border.second-list {.jump-link-list{
 		ul:before {
 			content: 'Injectables';
 			width: 100%;

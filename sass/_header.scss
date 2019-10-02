@@ -90,12 +90,12 @@
 	}
 	.is--ipad & {
 		position: absolute;
-		left: 0px;
+		// left: 0px;
 		display: block;
-		width: 65px;
+		width: 40px;
 		@include media(1330px) {
-			right: auto;
-			left: 0px;
+			right: 10px;
+			// left: 0px;
 		}
 	}
 }

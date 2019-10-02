@@ -4523,15 +4523,13 @@ main,
 
 .is--ipad .menu-trigger {
   position: absolute;
-  left: 0px;
   display: block;
-  width: 65px;
+  width: 40px;
 }
 
 @media only screen and (min-width: 1330px) {
   .is--ipad .menu-trigger {
-    right: auto;
-    left: 0px;
+    right: 10px;
   }
 }
 
@@ -5158,12 +5156,6 @@ article p ~ h2 {
   word-wrap: break-word;
 }
 
-@media only screen and (min-width: 1080px) {
-  .interior .content {
-    padding-right: 50px;
-  }
-}
-
 .interior .content a:hover {
   text-decoration: none;
 }
@@ -5486,9 +5478,9 @@ article p ~ h2 {
   }
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1280px) {
   .full-width {
-    left: calc(((40px + (50vw - (1080px / 2)))) * -1);
+    left: calc(((40px + (50vw - (1280px / 2)))) * -1);
   }
 }
 
@@ -5708,6 +5700,7 @@ article p ~ h2 {
 ==============================================*/
 body.inside.tmpl_type_page_landing .content {
   padding-bottom: 0;
+  padding-right: 0;
 }
 
 body.inside.tmpl_type_page_landing .interior {
@@ -5968,7 +5961,7 @@ body.inside.tmpl_type_page_landing .interior {
   }
 }
 
-.page-41 .flexible-jump-links .box-with-border:first-of-type .jump-link-list ul:before {
+.page-41 .flexible-jump-links .box-with-border.second-list .jump-link-list ul:before {
   content: 'Injectables';
   width: 100%;
   text-align: center;
