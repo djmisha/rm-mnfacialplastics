@@ -330,6 +330,10 @@ article p ~ h2 {
 			margin-right: 5px;
 		}
 	}
+	.bnacase-imgset {
+		margin: 0 0 40px 0;
+	}
+
 }
 
 
@@ -349,19 +353,25 @@ article p ~ h2 {
 	margin-bottom: 40px;
 	position: relative;
 	width: 100%;
+	margin-top: 60px;
+	margin-bottom: 60px;
 	@include media($tablet) {
-		margin-top: 20px;
+		margin-top: 80px;
+		margin-bottom: 80px;
+		// margin-top: 20px;
 		// margin-left: 40px;
 		max-width: 550px;
 		// float: right;
 		// padding-bottom: 70px;
 	}
 	.before, .after {
-		overflow: hidden;
+		// overflow: hidden;
 		width: 48%;
 		img {
 			width: 100%;
 			height: auto;
+			box-shadow: -7px 7px 0px $primaryColor;
+			
 			.mommy-makeover &,
 			.labiaplasty &,
 			.breast & ,
@@ -852,6 +862,9 @@ body.inside.tmpl_type_page_landing {
 			.box-with-border {
 				width: 45%;
 				height: auto;
+			}
+			ul {
+				min-height: 400px;
 			}
 		}
 	}

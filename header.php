@@ -9,7 +9,14 @@
 	<title><?php wp_title(""); ?></title>
 
 	<?php if(!is_404()): ?>
-		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Playfair+Display:400,400i|Source+Sans+Pro&display=swap' ); ?>
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:Playfair+Display:400,400i&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:Open+Sans:Source+Sans+Pro&display=swap" rel="stylesheet"> 
+
+		<?php //miniCSS::url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap' ); ?>
+		<?php //miniCSS::url( 'https://fonts.googleapis.com/css?family=Playfair+Display:400,400i&display=swap' ); ?>
+		<?php //miniCSS::url( 'https://fonts.googleapis.com/css?family=Open+Sans:Source+Sans+Pro&display=swap' ); ?>
 	<?php endif; ?>
 
 	<?php wp_head()?>

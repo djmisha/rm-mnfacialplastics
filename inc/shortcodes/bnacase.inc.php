@@ -69,7 +69,7 @@ add_shortcode('bnacase',function( $atts , $content = null ){
 			?>
 			<div class="bnacase-imgset bncacase-<?=$caseResult['case_id'];?>">
 				<div class="before">
-					<a href="<?=$makeCaseLink; ?>"><img data-src="<?=$rmg_case::get_image($imgsStack['before_image_path'], 'medium'); ?>" alt="bna-sample"  class="alignnone size-full b-lazy" /></a>
+					<a href="<?=$makeCaseLink; ?>"><img src="<?=$rmg_case::get_image($imgsStack['before_image_path'], 'medium'); ?>" alt="bna-sample"  class="alignnone size-full" /></a>
 					<?php
 					/**
 					* Include tags : addtags="true" or addtags="false"
@@ -78,7 +78,7 @@ add_shortcode('bnacase',function( $atts , $content = null ){
 					?>
 				</div>
 				<div class="after">
-					<a href="<?=$makeCaseLink; ?>"><img data-src="<?=$rmg_case::get_image($imgsStack['after_image_path'], 'medium'); ?>" alt="bna-sample"  class="alignnone size-full b-lazy" /></a>
+					<a href="<?=$makeCaseLink; ?>"><img src="<?=$rmg_case::get_image($imgsStack['after_image_path'], 'medium'); ?>" alt="bna-sample"  class="alignnone size-full" /></a>
 					<?php
 					/**
 					* Include tags : addtags="true" or addtags="false"

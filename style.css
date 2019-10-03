@@ -3520,7 +3520,6 @@ Copyright (c) 2015 Daniel Eden
 /* ------------------------
    Variables
 ------------------------ */
-/*non-surgical - side by side lists */
 /* ------------------------
    Mixins
 ------------------------ */
@@ -5385,6 +5384,10 @@ article p ~ h2 {
   margin-right: 5px;
 }
 
+.bna-slideshow .bnacase-imgset {
+  margin: 0 0 40px 0;
+}
+
 .bnacase-imgset {
   border-radius: 4px;
   clear: both;
@@ -5406,23 +5409,27 @@ article p ~ h2 {
   margin-bottom: 40px;
   position: relative;
   width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 @media only screen and (min-width: 768px) {
   .bnacase-imgset {
-    margin-top: 20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     max-width: 550px;
   }
 }
 
 .bnacase-imgset .before, .bnacase-imgset .after {
-  overflow: hidden;
   width: 48%;
 }
 
 .bnacase-imgset .before img, .bnacase-imgset .after img {
   width: 100%;
   height: auto;
+  -webkit-box-shadow: -7px 7px 0px #4ea9b7;
+          box-shadow: -7px 7px 0px #4ea9b7;
 }
 
 .mommy-makeover .bnacase-imgset .before img,
@@ -5958,6 +5965,9 @@ body.inside.tmpl_type_page_landing .interior {
   .page-41 .flexible-jump-links .box-with-border {
     width: 45%;
     height: auto;
+  }
+  .page-41 .flexible-jump-links ul {
+    min-height: 400px;
   }
 }
 
@@ -7331,7 +7341,7 @@ aside li {
 .home-featured .owl-item {
   max-width: 100%;
   margin-bottom: 40px;
-  height: auto;
+  height: 100%;
 }
 
 .home-featured .owl-nav {
@@ -7352,6 +7362,7 @@ aside li {
 
 .home-featured .inside-box {
   height: 100%;
+  min-height: 380px;
 }
 
 .home-featured .inside-box .the-headline {
