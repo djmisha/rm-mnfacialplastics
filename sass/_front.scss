@@ -409,7 +409,7 @@ footer
 	.owl-item {
 		max-width: 100%;
 		margin-bottom: 40px;
-		height: auto;
+		height: 100%;
 		@include media($tablet) {
 			// width: 48%;
 			// min-height: 400px;
