@@ -11,7 +11,7 @@ $("<span class=\"nav-dropdown-button\"><span class=\"dropdown-arrow\"></span></s
 
 // Insert Close Button
 
-$("<span class=\"close-menu\"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></span>").insertAfter(".main-menu > .menu-item:last-of-type");
+$("<span class=\"close-menu\"><i class=\"fa fa-window-close\" aria-hidden=\"true\"></i></span>").insertAfter(".main-menu > .menu-item:last-of-type");
 
 // Add/Remove Off-Canvas Menu Classes
 

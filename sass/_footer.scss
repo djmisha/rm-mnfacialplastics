@@ -206,8 +206,9 @@
 		.type-textarea {
 			input,
 			textarea {
-				background: #000 !important;
+				background: rgba(#000, .7)!important;
 				border: 1px solid rgba($secondaryColor, 100%);
+				color: $lightColor;
 			}
 			::-webkit-input-placeholder {
 				color: rgba($lightColor, 1);

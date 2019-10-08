@@ -91,9 +91,9 @@
 			<?php endif; ?>
 		</div>
 	</div>
-	<h3><?php the_field('store_headline'); ?></h3>
+	<!-- <h3><?php the_field('store_headline'); ?></h3>
 	<?php the_field('store_content'); ?>
-	<a href="<?php the_field('link'); ?>" class="button" rel="nofollow noopener" target="_blank">Shop</a>
+	<a href="<?php the_field('link'); ?>" class="button" rel="nofollow noopener" target="_blank">Shop</a> -->
 </section>
 
 

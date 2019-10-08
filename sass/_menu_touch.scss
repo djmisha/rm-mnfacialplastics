@@ -53,7 +53,7 @@
 			text-decoration: none;
 			display: block;
 			color: rgba($lightColor, .9);  // Set color for menu items
-			font-size: 16px; // Set font size for menu items
+			font-size: 14px; // Set font size for menu items
 			line-height: 1em;
 			// font-weight: 100;
 		}
@@ -145,7 +145,7 @@
 		display: block;
 		position: absolute;
 		top: 10px;
-		left: 15px;
+		right: 15px;
 		// padding: 14px 10px 7px 15px;
 		color: rgba($lightColor, .4); 
 		text-align: center;

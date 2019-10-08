@@ -89,13 +89,9 @@
 		background: $primaryAlt;
 	}
 	.is--ipad & {
-		position: absolute;
-		// left: 0px;
 		display: block;
-		width: 40px;
 		@include media(1330px) {
-			right: 10px;
-			// left: 0px;
+			// right: 10px;
 		}
 	}
 }

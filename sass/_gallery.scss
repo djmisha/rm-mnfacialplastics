@@ -61,11 +61,22 @@
 		text-decoration: none;
 		color: $darkColor;
 		h2 {
+			display: block;
 			text-align: center;
 			margin-top: 0px;
 			font-size: 26px;
-			line-height: 30px;
+			line-height: 26px;
 			margin-bottom: 30px;
+			@include media($tablet) {
+				height: 40px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			@include media($desktop) {
+				height: auto;
+				padding-left: 0;
+				padding-right: 0;
+			}
 		}
 	}
 	.gallery-image {
@@ -187,7 +198,7 @@
 			}
 		}
 		.button {
-			background: $secondaryAlt;
+			// background: $secondaryAlt;
 			position: absolute;
 			left: 0;
 			right: 0;

@@ -36,11 +36,9 @@
 				<?php if(have_rows('locations', 'option')): ?>
 					<?php while(have_rows('locations', 'option')): the_row(); ?>
 						<div class="the-loc">
+							<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound loc-name" data-label="Address - Footer" target="_blank"  rel="noopener">
 							<i class="fas fa-map-marker-alt"></i>
-							<!-- <span><?php the_sub_field('name', 'option'); ?></span><br> -->
-							<div class="loc-addy">
-								
-								<?php the_sub_field('address', 'option'); ?><br /> <?php the_sub_field('city', 'option'); ?>
+							<div class="loc-addy"><?php the_sub_field('address', 'option'); ?><br /> <?php the_sub_field('city', 'option'); ?></div>
 							</a>
 							</div>
 							<div class="loc-phone">
@@ -48,7 +46,6 @@
 									Phone: <?php the_sub_field('phone', 'option'); ?></a>
 									<br>
 									Fax: <?php the_sub_field('fax', 'option'); ?>
-							</div>
 						</div>
 					<?php endwhile; ?>
 				<?php endif; ?>

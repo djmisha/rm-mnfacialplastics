@@ -496,10 +496,11 @@ footer
 		box-shadow: -7px 7px 0px $primaryColor;
 		margin-bottom: 40px;
 		width: 100%;
-		@include media($tablet) {
-			width: auto;
-			max-width: 100%;
+		width: auto;
+		max-width: 100%;
 			height: auto;
+		@include media($tablet) {
+			max-width: 100%;
 		}
 	}
 	a {
