@@ -22,8 +22,6 @@
 
 
 
-		$('#Botox-Dysport').append('<a href="' + site_path  + '/non-surgical/botox-minneapolis/" class="button" rel="nofollow">Learn More about Botox</a><br><a href="' + site_path  + '/non-surgical/dysport/" class="button" rel="nofollow">Learn More about Dysport&reg;</a>');
-
 
 		/*================================
 		=            Wow INIT            =
@@ -205,6 +203,12 @@
 			$(this).find("dt a").attr("data-caption", caption);
 		});
 
+
+
+		/*NON SURGICAL PAGE APPEND BUTTONS */
+
+
+		$('#Botox-Dysport').append('<a href="' + site_path  + '/non-surgical/botox-minneapolis/" class="button" rel="nofollow">Learn More about Botox</a><br><a href="' + site_path  + '/non-surgical/dysport/" class="button" rel="nofollow">Learn More about Dysport&reg;</a>');
 
 
 
