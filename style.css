@@ -6054,6 +6054,10 @@ body.inside.tmpl_type_page_landing .interior {
   }
 }
 
+.page-41 #Botox-Dysport a.button:first-of-type {
+  display: none;
+}
+
 /* ------------------------
 	Aside
 ------------------------ */

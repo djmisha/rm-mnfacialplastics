@@ -21,6 +21,10 @@
 		var site_path = rm_data.siteUrl;
 
 
+
+		$('#Botox-Dysport').append('<a href="' + site_path  + '/non-surgical/botox-minneapolis/" class="button" rel="nofollow">Learn More about Botox</a><br><a href="' + site_path  + '/non-surgical/dysport/" class="button" rel="nofollow">Learn More about Dysport&reg;</a>');
+
+
 		/*================================
 		=            Wow INIT            =
 		================================*/
