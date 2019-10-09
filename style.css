@@ -4763,8 +4763,9 @@ main,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -4776,6 +4777,10 @@ main,
   vertical-align: top;
   position: relative;
   height: 100%;
+}
+
+.hover-menu .main-menu > li:first-of-type a {
+  border-left: 1px solid #595858;
 }
 
 .hover-menu .main-menu > li:hover > a {
@@ -4797,7 +4802,7 @@ main,
 .hover-menu .main-menu > li a {
   display: block;
   text-decoration: none;
-  padding: 10px 23px;
+  padding: 10px 27px;
   -webkit-transition: .25s ease-in-out background;
   transition: .25s ease-in-out background;
   color: #ffffff;
@@ -4814,7 +4819,7 @@ main,
 }
 
 .hover-menu a {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .hover-menu .sub-menu {
@@ -6056,6 +6061,52 @@ body.inside.tmpl_type_page_landing .interior {
 
 .page-41 #Botox-Dysport a.button:first-of-type {
   display: none;
+}
+
+/* Pop up */
+#gallerypop-notice-body {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: #3f3f3f;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+#notice-body-everything {
+  max-width: 500px;
+  height: auto;
+  padding: 20px;
+  display: inline-block;
+}
+
+#notice-body-everything h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  margin: 20px 0 30px 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+#notice-body p {
+  margin: 0 0 30px 0;
+  font-weight: bold;
+  font-size: 17px;
+  color: #ffffff !important;
+}
+
+#notice-body-everything #buttons {
+  margin-top: 40px;
+  display: block;
+  text-align: center;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#notice-body-everything #buttons a {
+  /*box-shadow:1px 1px 1px 0px #333;*/
+  font-weight: bold;
+  font-size: 20px;
 }
 
 /* ------------------------

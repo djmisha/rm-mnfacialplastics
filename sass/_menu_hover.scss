@@ -17,7 +17,7 @@ $menuHeight : 44px;
 		font-size: 0;
 		text-align: center;
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
 		align-items: center;
 		height: $menuHeight;
 		> li {
@@ -25,13 +25,16 @@ $menuHeight : 44px;
 			vertical-align: top;
 			position: relative;
 			height: 100%;
-			
+
+
 			// margin-left: 10px;
-			// &:last-of-type {
-			// 	a {
-			// 		padding-right: 0;
-			// 	}
-			// }
+			&:first-of-type {
+				a {
+					// border: 1px solid pink;
+				border-left: 1px solid #595858;
+
+				}
+			}
 			//show sub-menus on hover
 			&:hover{
 				> a {
@@ -61,7 +64,7 @@ $menuHeight : 44px;
 			a{	
 				display: block;
 				text-decoration: none;
-				padding: 10px 23px;
+				padding: 10px 27px;
 				transition: .25s ease-in-out background;
 				color: $lightColor; 
 				height: $menuHeight;
@@ -76,12 +79,13 @@ $menuHeight : 44px;
 					background: $primaryColor;
 					// background: darken( $primaryColor, 12%);
 				}
+				
 			}
 		}
 	}
 
 	a {
-		font-size: 14px; 
+		font-size: 16px; 
 	}
 
 	.sub-menu {
