@@ -13,7 +13,7 @@
 		</div>
 	</section>
 </div> 
-
+ 
 
 <section class="home-testis">
 	<div class="box-with-border">
@@ -112,7 +112,7 @@
 					<img src="<?php the_sub_field('image'); ?>" alt="icon">
 					<div class="the-headline"><?php the_sub_field('name'); ?></div>
 					<?php the_sub_field('content'); ?>
-					<a href="<?php the_field('link'); ?>" class="button" rel="nofollow">Learn More</a>				
+					<a href="<?php the_sub_field('link'); ?>" class="button" rel="nofollow">Learn More</a>				
 				</div>
 			</div>
 			<?php endwhile; ?>

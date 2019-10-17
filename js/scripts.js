@@ -158,7 +158,7 @@
 		=============================================*/
 
 		if ($("body.rmgallery-child").length) {
-			//if ($.cookie("gallerypop") == null) {
+			if ($.cookie("gallerypop") == null) {
 				console.log(theme_path);
 				$.fancybox.open({
 					src: theme_path + "/popup.php",
@@ -183,7 +183,7 @@
 						}
 					}
 				});
-			//} //end cookies check
+			} //end cookies check
 		}
 		
 

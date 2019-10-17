@@ -56,7 +56,7 @@
 
 	<section class="lower-footer">
 		<div class="trainded-wrapper">
-			<div class="foot-headline">Fellowship Trained Facial Plastic Surgeon</div>
+			<div class="foot-headline">Fellowship-Trained Facial Plastic Surgeon</div>
 			<div class="footer-logos">
 				<?php if(have_rows('footer_logos', 'option')): ?>
 					<ul>
