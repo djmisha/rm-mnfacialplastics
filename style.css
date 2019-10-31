@@ -4802,7 +4802,7 @@ main,
 .hover-menu .main-menu > li a {
   display: block;
   text-decoration: none;
-  padding: 10px 27px;
+  padding: 10px 25px;
   -webkit-transition: .25s ease-in-out background;
   transition: .25s ease-in-out background;
   color: #ffffff;
@@ -4819,7 +4819,7 @@ main,
 }
 
 .hover-menu a {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .hover-menu .sub-menu {
